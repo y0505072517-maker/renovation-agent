@@ -21,7 +21,6 @@
 }
 *{margin:0;padding:0;box-sizing:border-box;}
 body{font-family:'Heebo',sans-serif;background:var(--bg);color:var(--text);direction:rtl;min-height:100vh;}
-
 /* TOPBAR */
 .topbar{height:50px;background:var(--s1);border-bottom:1px solid var(--border);display:flex;align-items:center;padding:0 18px;gap:12px;position:sticky;top:0;z-index:100;}
 .logo-mark{width:32px;height:32px;background:linear-gradient(135deg,var(--gold),var(--gold2));border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:15px;flex-shrink:0;}
@@ -31,7 +30,6 @@ body{font-family:'Heebo',sans-serif;background:var(--bg);color:var(--text);direc
 .v-badge{background:var(--gold-dim);border:1px solid rgba(232,184,75,0.3);color:var(--gold);font-size:10px;font-weight:800;padding:2px 9px;border-radius:10px;}
 .live-dot{width:6px;height:6px;background:var(--green);border-radius:50%;animation:pulse 2s infinite;display:inline-block;margin-left:4px;}
 @keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(34,199,122,0.4)}50%{box-shadow:0 0 0 4px rgba(34,199,122,0)}}
-
 /* STEPPER */
 .stepper{display:flex;align-items:center;padding:8px 16px;background:var(--s1);border-bottom:1px solid var(--border);gap:0;overflow-x:auto;}
 .step{display:flex;align-items:center;gap:6px;cursor:pointer;padding:5px 9px;border-radius:7px;transition:all 0.15s;white-space:nowrap;}
@@ -44,10 +42,8 @@ body{font-family:'Heebo',sans-serif;background:var(--bg);color:var(--text);direc
 .step.active .step-label{color:var(--gold);}
 .step.done .step-label{color:var(--green);}
 .step-arrow{color:var(--t4);font-size:10px;padding:0 2px;}
-
 /* LAYOUT */
 .main-wrap{display:grid;grid-template-columns:1fr 330px;min-height:calc(100vh - 100px);}
-
 /* FORM */
 .form-area{padding:18px 22px;overflow-y:auto;}
 .section-title{font-family:'Noto Serif Hebrew',serif;font-size:16px;font-weight:700;margin-bottom:2px;}
@@ -72,7 +68,6 @@ body{font-family:'Heebo',sans-serif;background:var(--bg);color:var(--text);direc
 .fcheck.on .fcheck-txt{color:var(--text);}
 .fdivider{height:1px;background:var(--border);margin:12px 0 16px;}
 .fdivider-lbl{font-size:9px;font-weight:700;color:var(--t4);text-transform:uppercase;letter-spacing:1px;text-align:center;background:var(--bg);width:fit-content;margin:-10px auto 0;padding:0 10px;position:relative;}
-
 /* IMAGE UPLOAD */
 .img-upload-zone{border:2px dashed var(--border2);border-radius:10px;padding:16px;text-align:center;cursor:pointer;transition:all 0.15s;background:var(--s2);margin-bottom:10px;}
 .img-upload-zone:hover{border-color:var(--gold);background:var(--gold-dim);}
@@ -88,7 +83,6 @@ body{font-family:'Heebo',sans-serif;background:var(--bg);color:var(--text);direc
 .analyze-btn{width:100%;padding:7px;background:var(--purple-dim);border:1px solid rgba(155,89,182,0.4);border-radius:7px;color:var(--purple);font-size:11.5px;font-weight:700;cursor:pointer;font-family:'Heebo',sans-serif;transition:all 0.12s;margin-top:6px;}
 .analyze-btn:hover{background:rgba(155,89,182,0.2);}
 .analyze-btn:disabled{opacity:0.4;cursor:not-allowed;}
-
 /* UNIT CARD */
 .unit-card{background:var(--s2);border:1px solid var(--border);border-radius:10px;padding:13px;margin-bottom:10px;}
 .unit-card-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;}
@@ -96,7 +90,6 @@ body{font-family:'Heebo',sans-serif;background:var(--bg);color:var(--text);direc
 .unit-del{background:none;border:1px solid rgba(240,69,69,0.3);color:var(--red);font-size:11px;padding:3px 8px;border-radius:5px;cursor:pointer;font-family:'Heebo',sans-serif;}
 .add-unit-btn{width:100%;padding:9px;background:var(--s2);border:1px dashed var(--border2);border-radius:8px;color:var(--t2);font-size:12px;font-weight:600;cursor:pointer;font-family:'Heebo',sans-serif;transition:all 0.12s;margin-bottom:8px;}
 .add-unit-btn:hover{border-color:var(--gold);color:var(--gold);}
-
 /* WALLS SECTION */
 .walls-section{background:var(--s3);border:1px solid var(--border);border-radius:9px;padding:12px;margin-top:10px;}
 .walls-title{font-size:11px;font-weight:800;color:var(--t2);text-transform:uppercase;letter-spacing:0.7px;margin-bottom:10px;display:flex;align-items:center;gap:6px;}
@@ -104,7 +97,6 @@ body{font-family:'Heebo',sans-serif;background:var(--bg);color:var(--text);direc
 .wall-item-del{background:none;border:none;color:var(--red);font-size:14px;cursor:pointer;flex-shrink:0;margin-top:2px;}
 .add-wall-btn{width:100%;padding:7px;background:var(--s3);border:1px dashed var(--border2);border-radius:7px;color:var(--t3);font-size:11.5px;font-weight:600;cursor:pointer;font-family:'Heebo',sans-serif;transition:all 0.12s;}
 .add-wall-btn:hover{border-color:var(--blue);color:var(--blue);}
-
 /* PRODUCT CATALOG */
 .cat-section{margin-bottom:12px;background:var(--s2);border:1px solid var(--border);border-radius:9px;overflow:hidden;}
 .cat-head{padding:9px 12px;display:flex;align-items:center;justify-content:space-between;cursor:pointer;transition:background 0.12s;border-bottom:1px solid var(--border);}
@@ -133,7 +125,6 @@ body{font-family:'Heebo',sans-serif;background:var(--bg);color:var(--text);direc
 .prod-price{font-size:11.5px;font-weight:700;color:var(--gold);flex-shrink:0;white-space:nowrap;}
 .prod-link{font-size:9px;color:var(--blue);text-decoration:none;}
 .prod-link:hover{text-decoration:underline;}
-
 /* LABOR COSTS */
 .labor-section{background:var(--s2);border:1px solid var(--border);border-radius:9px;padding:12px;margin-bottom:12px;}
 .labor-title{font-size:11px;font-weight:800;color:var(--orange);text-transform:uppercase;letter-spacing:0.7px;margin-bottom:10px;}
@@ -174,7 +165,6 @@ body{font-family:'Heebo',sans-serif;background:var(--bg);color:var(--text);direc
 .p-mat{font-size:8.5px;color:var(--blue);}
 .p-lab{font-size:8.5px;color:var(--orange);}
 .p-tot{font-size:10.5px;font-weight:700;color:var(--text);}
-
 /* BOTTOM BAR */
 .gen-bar{padding:9px 16px;background:var(--s1);border-top:1px solid var(--border);display:flex;gap:8px;align-items:center;position:sticky;bottom:0;z-index:50;}
 .gen-btn{flex:1;padding:10px;background:linear-gradient(135deg,var(--gold),var(--gold2));border:none;border-radius:8px;color:#000;font-size:13px;font-weight:900;font-family:'Heebo',sans-serif;cursor:pointer;transition:all 0.15s;}
@@ -182,12 +172,10 @@ body{font-family:'Heebo',sans-serif;background:var(--bg);color:var(--text);direc
 .gen-btn:disabled{opacity:0.4;cursor:not-allowed;transform:none;}
 .exp-btn{padding:8px 12px;background:var(--green-dim);border:1px solid rgba(34,199,122,0.4);color:var(--green);border-radius:8px;font-size:11.5px;font-weight:700;font-family:'Heebo',sans-serif;cursor:pointer;white-space:nowrap;}
 .exp-btn:disabled{opacity:0.3;cursor:not-allowed;}
-
 /* NAV BTNS */
 .nav-row{display:flex;gap:8px;margin-top:12px;}
 .btn-back{flex:1;padding:9px;background:var(--s2);border:1px solid var(--border);border-radius:8px;color:var(--t2);font-size:12px;font-weight:600;cursor:pointer;font-family:'Heebo',sans-serif;}
 .btn-next{flex:2;padding:9px;background:linear-gradient(135deg,var(--gold),var(--gold2));border:none;border-radius:8px;color:#000;font-size:12.5px;font-weight:900;cursor:pointer;font-family:'Heebo',sans-serif;}
-
 /* LOADING */
 .loading{display:none;position:fixed;inset:0;background:rgba(8,11,15,0.9);z-index:500;flex-direction:column;align-items:center;justify-content:center;gap:14px;}
 .loading.show{display:flex;}
@@ -195,7 +183,6 @@ body{font-family:'Heebo',sans-serif;background:var(--bg);color:var(--text);direc
 @keyframes spin{to{transform:rotate(360deg)}}
 .loading-txt{font-family:'Noto Serif Hebrew',serif;font-size:15px;}
 .loading-sub{font-size:11px;color:var(--t2);text-align:center;}
-
 /* MODAL */
 .modal{display:none;position:fixed;inset:0;background:rgba(8,11,15,0.9);z-index:600;align-items:center;justify-content:center;}
 .modal.open{display:flex;}
@@ -207,20 +194,16 @@ body{font-family:'Heebo',sans-serif;background:var(--bg);color:var(--text);direc
 .modal-actions{display:flex;gap:7px;}
 .modal-copy{flex:1;padding:9px;background:var(--gold);border:none;border-radius:7px;color:#000;font-size:13px;font-weight:800;cursor:pointer;font-family:'Heebo',sans-serif;}
 .modal-close{padding:9px 13px;background:var(--s3);border:1px solid var(--border);color:var(--t2);border-radius:7px;font-size:12px;cursor:pointer;font-family:'Heebo',sans-serif;}
-
 /* NOTIF */
 .notif{position:fixed;bottom:16px;left:50%;transform:translateX(-50%);background:var(--green);color:#000;font-size:12px;font-weight:800;padding:8px 16px;border-radius:12px;z-index:999;opacity:0;transition:opacity 0.3s;pointer-events:none;font-family:'Heebo',sans-serif;white-space:nowrap;}
 .notif.show{opacity:1;}
 .err{background:var(--red-dim);border:1px solid rgba(240,69,69,0.3);border-radius:8px;padding:10px 12px;margin-bottom:10px;font-size:12px;color:var(--red);line-height:1.6;display:none;}
-
-
 .info-banner{background:rgba(77,142,240,0.10);border-bottom:1px solid rgba(77,142,240,0.22);padding:10px 16px;display:flex;gap:10px;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;}
 .info-banner-main{font-size:12px;line-height:1.7;color:var(--text);}
 .info-banner-main strong{color:var(--blue);}
 .info-banner-note{font-size:10px;color:var(--t2);}
 .info-banner-actions{display:flex;gap:8px;align-items:center;flex-wrap:wrap;}
 .info-chip{padding:6px 10px;background:var(--s2);border:1px solid var(--border);border-radius:999px;font-size:11px;color:var(--t2);}
-
 @media (max-width:960px){
   .main-wrap{grid-template-columns:1fr;}
   .bom-panel{position:relative;top:0;height:auto;border-right:none;border-top:1px solid var(--border);}
@@ -236,7 +219,6 @@ body{font-family:'Heebo',sans-serif;background:var(--bg);color:var(--text);direc
     <span style="font-size:11px;color:var(--green);font-weight:600;"><span class="live-dot"></span>AI פעיל</span>
   </div>
 </div>
-
 <div class="info-banner">
   <div>
     <div class="info-banner-main"><strong>העמוד מוכן לעבודה.</strong> אפשר לפתוח אותו ישירות בדפדפן, ולפיצ'רי AI יש להזין Anthropic API key כשמתבקשים.</div>
@@ -248,7 +230,6 @@ body{font-family:'Heebo',sans-serif;background:var(--bg);color:var(--text);direc
     <div class="info-chip">3. צור BOM</div>
   </div>
 </div>
-
 <div class="stepper">
   <div class="step active" id="sb1" onclick="tryGo(1)"><div class="step-num">1</div><div class="step-label">בניין</div></div>
   <div class="step-arrow">›</div>
@@ -262,10 +243,8 @@ body{font-family:'Heebo',sans-serif;background:var(--bg);color:var(--text);direc
   <div class="step-arrow">›</div>
   <div class="step" id="sb6" onclick="tryGo(6)"><div class="step-num">6</div><div class="step-label">BOM</div></div>
 </div>
-
 <div class="main-wrap">
 <div class="form-area" id="formArea">
-
 <div id="s1">
   <div class="section-title">🏗️ נתוני הנכס הכללי</div>
   <div class="section-sub">הגדר מאפייני הנכס לפני חלוקה ליחידות</div>
@@ -316,7 +295,6 @@ body{font-family:'Heebo',sans-serif;background:var(--bg);color:var(--text);direc
       </div>
     </div>
   </div>
-
   <div class="fdivider"><div class="fdivider-lbl">שטחים ותשתיות משותפות</div></div>
   <div class="frow">
     <div class="fgroup">
@@ -344,7 +322,6 @@ body{font-family:'Heebo',sans-serif;background:var(--bg);color:var(--text);direc
     <div class="fcheck" onclick="tc(this)" id="c-parking"><div class="fcheck-box"></div><div class="fcheck-txt">🅿️ חניה</div></div>
     <div class="fcheck" onclick="tc(this)" id="c-garden"><div class="fcheck-box"></div><div class="fcheck-txt">🌿 גינה + גדר</div></div>
   </div>
-
   <div class="fdivider"><div class="fdivider-lbl">קירות חיצוניים + חזית</div></div>
   <div class="frow">
     <div class="fgroup">
@@ -364,20 +341,17 @@ body{font-family:'Heebo',sans-serif;background:var(--bg);color:var(--text);direc
       </select>
     </div>
   </div>
-
   <div class="walls-section">
     <div class="walls-title">🧱 קירות משותפים / בניין</div>
     <div id="bldgWalls"></div>
     <button class="add-wall-btn" onclick="addWall('bldg')">＋ הוסף קיר</button>
   </div>
-
   <div class="fgroup" style="margin:12px 0;">
     <div class="flabel">הערות</div>
     <input type="text" class="finput" id="notes" placeholder="שכונה, רחוב, תקציב מקסימלי, הערות מיוחדות...">
   </div>
   <button class="btn-next" style="width:100%;" onclick="next(1)">המשך לחלוקת יחידות ›</button>
 </div>
-
 <div id="s2" style="display:none;">
   <div class="section-title">🏢 חלוקת יחידות</div>
   <div class="section-sub" id="s2sub">הגדר כל יחידה שנוצרת מחלוקת הנכס</div>
@@ -389,12 +363,10 @@ body{font-family:'Heebo',sans-serif;background:var(--bg);color:var(--text);direc
     <button class="btn-next" onclick="next(2)">המשך לקירות ›</button>
   </div>
 </div>
-
 <div id="s3" style="display:none;">
   <div class="section-title">🧱 קירות לפי יחידה</div>
   <div class="section-sub">הגדר קירות לבניה / הריסה לכל יחידה</div>
   <div id="unitWallsWrap"></div>
-
   <div class="labor-section" style="margin-top:16px;">
     <div class="labor-title">👷 מחירי עבודה — שוק אתונה 2025-2026</div>
     <div class="labor-grid" style="grid-template-columns:1fr 1fr;">
@@ -434,13 +406,11 @@ body{font-family:'Heebo',sans-serif;background:var(--bg);color:var(--text);direc
       <div class="labor-item"><div class="labor-item-name">התקנת חלון PVC</div><div class="labor-item-price">60-120€<span class="labor-item-unit">/יח'</span></div><div style="font-size:9px;color:var(--t3);margin-top:1px;">2-4 שעות · 2 פועלים</div></div>
     </div>
   </div>
-
   <div class="nav-row">
     <button class="btn-back" onclick="goStep(2)">‹ חזור</button>
     <button class="btn-next" onclick="next(3)">המשך לבחירת מוצרים ›</button>
   </div>
 </div>
-
 <div id="s4" style="display:none;">
   <div class="section-title">🛒 בחירת מוצרים</div>
   <div class="section-sub">לחץ על קטגוריה ← בחר מוצר ספציפי או רמת גימור</div>
@@ -450,11 +420,9 @@ body{font-family:'Heebo',sans-serif;background:var(--bg);color:var(--text);direc
     <button class="btn-next" onclick="next(4)">המשך לתמונות ›</button>
   </div>
 </div>
-
 <div id="s5" style="display:none;">
   <div class="section-title">📸 תמונות הנכס</div>
   <div class="section-sub">העלה תמונות לתיעוד וניתוח AI — לפי בניין ויחידות</div>
-
   <div style="margin-bottom:16px;">
     <div class="flabel" style="margin-bottom:8px;">📷 תמונות כלליות — בניין / שטחים משותפים</div>
     <div class="img-upload-zone" id="bldg-upload-zone" onclick="document.getElementById('bldg-file-input').click()">
@@ -466,15 +434,12 @@ body{font-family:'Heebo',sans-serif;background:var(--bg);color:var(--text);direc
     <button class="analyze-btn" id="bldg-analyze-btn" onclick="analyzeImages('bldg')" disabled>🤖 נתח תמונות עם AI</button>
     <div class="img-analysis" id="bldg-analysis"></div>
   </div>
-
   <div id="unitImagesWrap"></div>
-
   <div class="nav-row">
     <button class="btn-back" onclick="goStep(4)">‹ חזור</button>
     <button class="btn-next" onclick="next(5)">צור BOM מלא ✨ ›</button>
   </div>
 </div>
-
 <div id="s6" style="display:none;">
   <div class="section-title">✅ BOM מוכן לייצוא</div>
   <div class="section-sub">ראה פירוט בפאנל הימני · ייצא ל-Excel דרך Claude</div>
@@ -484,9 +449,7 @@ body{font-family:'Heebo',sans-serif;background:var(--bg);color:var(--text);direc
     <button onclick="resetProject()" style="width:100%;padding:9px;background:var(--s2);border:1px solid var(--border);border-radius:8px;color:var(--t2);font-size:12px;font-weight:600;cursor:pointer;font-family:'Heebo',sans-serif;">🆕 פרויקט חדש</button>
   </div>
 </div>
-
 </div>
-
 <div class="bom-panel">
   <div class="bom-head"><div class="bom-title">📦 Bill of Materials</div><div class="bom-sub" id="bomSub">ממתין לנתונים...</div></div>
   <div class="bom-kpis" id="bomKpis" style="display:none;">
@@ -502,18 +465,15 @@ body{font-family:'Heebo',sans-serif;background:var(--bg);color:var(--text);direc
   </div>
 </div>
 </div>
-
 <div class="gen-bar">
   <button class="gen-btn" id="genBtn" onclick="generateBOM()" disabled>✨ צור BOM מפורט (AI)</button>
   <button class="exp-btn" id="expBtn" onclick="openModal()" disabled>📋 ייצא → Excel</button>
 </div>
-
 <div class="loading" id="loading">
   <div class="spinner"></div>
   <div class="loading-txt">הסוכן מחשב עלויות...</div>
   <div class="loading-sub">מחירי שוק אתונה 2025-2026<br>135 ספקים יווניים · Leroy Merlin · Praktiker · IKEA</div>
 </div>
-
 <div class="modal" id="modal">
   <div class="modal-box">
     <div class="modal-title">📋 ייצוא ל-Excel דרך Claude</div>
@@ -530,7 +490,8 @@ body{font-family:'Heebo',sans-serif;background:var(--bg);color:var(--text);direc
 <script>
 let sessionApiKey='';
 const MAX_IMAGE_SIZE_BYTES=10*1024*1024;
-
+const PRICE_CACHE_KEY='renovation-price-cache-v1';
+const PRICE_CACHE_MAX_AGE_MS=1000*60*60*24*7;
 function esc(v){return String(v??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));}
 function escAttr(v){return esc(v).replace(/`/g,'&#96;');}
 function safeUrl(url){try{const u=new URL(String(url||''),window.location.href);return ['http:','https:'].includes(u.protocol)?u.href:'#';}catch{return '#';}}
@@ -539,6 +500,29 @@ function encodeDataAttr(obj){return encodeURIComponent(JSON.stringify(obj));}
 function decodeDataAttr(str){return JSON.parse(decodeURIComponent(str));}
 function formatTextHtml(text){return esc(text).replace(/\n/g,'<br>');}
 function makeIdFragment(value){return String(value??'').replace(/[^a-zA-Z0-9_-]+/g,'_').slice(0,32)||'item';}
+function nowIso(){return new Date().toISOString();}
+function fmtChecked(ts){
+  if(!ts) return '—';
+  const d=new Date(ts);
+  if(Number.isNaN(d.getTime())) return esc(ts);
+  return d.toLocaleString('he-IL',{year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit'});
+}
+function getLocalStorage(){
+  try{ return window.localStorage; }catch{return null; }
+}
+function readPriceCache(){
+  const storage=getLocalStorage();
+  if(!storage) return {};
+  try{ return JSON.parse(storage.getItem(PRICE_CACHE_KEY)||'{}')||{}; }catch{return {};}
+}
+function writePriceCache(cache){
+  const storage=getLocalStorage();
+  if(!storage) return;
+  try{ storage.setItem(PRICE_CACHE_KEY,JSON.stringify(cache)); }catch{}
+}
+function getPriceProxyUrl(){
+  return String(window.RENOVATION_PRICE_PROXY || '').trim();
+}
 function getApiKey(){return sessionApiKey.trim();}
 function ensureApiKey(){
   const existing=getApiKey();
@@ -551,7 +535,6 @@ function ensureApiKey(){
   sessionApiKey=entered.trim();
   return sessionApiKey;
 }
-
 const SUPPLIERS = {
   construction: [
     {name:'Leroy Merlin',url:'https://www.leroymerlin.gr/'},
@@ -707,7 +690,6 @@ const SUPPLIERS = {
     {name:'Praktiker',url:'https://www.praktiker.gr/'},
   ],
 };
-
 const CAT = {
   elec_panel:{label:'⚡ לוח חשמל',supplier_cat:'electrical',products:[
     {id:'ep1',name:'Legrand XL3 160 3-Phase 24-Circuit (תלת פאזי)',cat:'020043',supplier:'Kafkas',price:420,unit:"יח'",grade:'Luxury',link:'https://www.kafkas.gr/search?q=legrand+xl3+160+trifasiko'},
@@ -924,7 +906,6 @@ const CAT = {
     {id:'fu10',name:'IKEA KALLAX Shelf 77×77',cat:'IK-KL-77',supplier:'IKEA Greece',price:85,unit:"יח'",grade:'Basic',link:'https://www.ikea.gr/search?q=kallax+shelf+unit'},
   ]},
 };
-
 const WALL_TYPES = [
   {id:'plasterboard',label:'🔲 קיר גבס (Knauf/Rigips)',mat_price:18,labor_price:22,unit:'מ"ר',supplier:'Knauf Greece',link:'https://www.knauf.gr/search?q=gypsum+board+wall'},
   {id:'brick',label:'🧱 קיר לבנים פנימי',mat_price:25,labor_price:30,unit:'מ"ר',supplier:'Leroy Merlin',link:'https://www.leroymerlin.gr/search?q=brick+wall+interior'},
@@ -939,11 +920,13 @@ const WALL_TYPES = [
   {id:'ext_paint_only',label:'🎨 צבע חיצוני בלבד (χρωματισμός εξωτερικός)',mat_price:4,labor_price:8,unit:'מ"ר',supplier:'Vechro',link:'https://www.vechro.gr/search?q=exterior+paint+facade'},
   {id:'insulation_internal',label:'🌡️ בידוד פנימי (XPS על קיר)',mat_price:22,labor_price:18,unit:'מ"ר',supplier:'Fixmat',link:'https://fixmat.gr/search?q=xps+internal+insulation'},
 ];
-
 let currentStep=1, units=[], uid=0, walls={bldg:[]}, selProds={}, currentBOM=null;
 let images={bldg:[]};
+let bomAutoTimer=null;
+let lastPriceRefreshState={mode:'default',checked_at:'',note:'מחירוני הקטלוג המקומיים משמשים כברירת מחדל.'};
+let bomDirtyReason='';
+let bomLineCounter=0;
 Object.keys(CAT).forEach(k=>{ selProds[k]={mode:'grade',grade:'Mid',pid:null}; });
-
 function tc(el){ el.classList.toggle('on'); el.querySelector('.fcheck-box').textContent=el.classList.contains('on')?'✓':''; }
 function on(id){ return document.getElementById(id)?.classList.contains('on'); }
 function tg(id){ return document.querySelector(`#${id} .ftoggle.active`)?.dataset.val||''; }
@@ -951,17 +934,151 @@ function notify(m){ const n=document.getElementById('notif'); n.textContent=m; n
 function showErr(id,m){ const e=document.getElementById(id); e.textContent=m; e.style.display='block'; setTimeout(()=>e.style.display='none',4000); }
 function numVal(id,def=0){ return parseInt(document.getElementById(id)?.value)||def; }
 function resetProject(){ window.location.reload(); }
-
+function linePriceKey(catKey, product){ return `${catKey}:${product.id}`; }
+function isFreshPriceEntry(entry){
+  if(!entry?.last_checked) return false;
+  const ts=new Date(entry.last_checked).getTime();
+  return Number.isFinite(ts) && (Date.now()-ts) <= PRICE_CACHE_MAX_AGE_MS;
+}
+function getCachedPriceEntry(priceKey){
+  const entry=readPriceCache()[priceKey];
+  return isFreshPriceEntry(entry) ? entry : null;
+}
+function setCachedPriceEntry(priceKey, entry){
+  const cache=readPriceCache();
+  cache[priceKey]=entry;
+  writePriceCache(cache);
+}
+function normalizeBomLine(item, categoryName=''){
+  const qty=roundMoney(item.qty ?? 1);
+  const unitMat=roundMoney(item.unit_mat ?? 0);
+  const unitLabor=roundMoney(item.unit_labor ?? 0);
+  const totalMat=roundMoney(item.total_mat ?? qty*unitMat);
+  const totalLabor=roundMoney(item.total_labor ?? qty*unitLabor);
+  const total=roundMoney(item.total ?? totalMat+totalLabor);
+  return {
+    ...item,
+    bom_ref:item.bom_ref || `line-${++bomLineCounter}`,
+    category:item.category || categoryName || '',
+    qty,
+    unit:item.unit || "יח'",
+    unit_mat:unitMat,
+    unit_labor:unitLabor,
+    total_mat:totalMat,
+    total_labor:totalLabor,
+    total,
+    price_source:item.price_source || (unitMat>0 ? 'default' : 'rule'),
+    last_checked:item.last_checked || nowIso(),
+    note:item.note || ''
+  };
+}
+function rollupCategory(cat){
+  cat.items=(cat.items||[]).map(item=>normalizeBomLine(item,cat.name));
+  cat.subtotal_mat=sumBy(cat.items,'total_mat');
+  cat.subtotal_labor=sumBy(cat.items,'total_labor');
+  cat.subtotal=sumBy(cat.items,'total');
+  return cat;
+}
+function rollupBomContainer(container){
+  container.categories=(container.categories||[]).filter(Boolean).map(cat=>rollupCategory(cat));
+  container.subtotal_mat=sumBy(container.categories,'subtotal_mat');
+  container.subtotal_labor=sumBy(container.categories,'subtotal_labor');
+  container.subtotal=sumBy(container.categories,'subtotal');
+  return container;
+}
+function rollupDemolition(demolition){
+  demolition.items=(demolition.items||[]).map(item=>normalizeBomLine(item,'הריסות ופינוי'));
+  demolition.subtotal_mat=sumBy(demolition.items,'total_mat');
+  demolition.subtotal_labor=sumBy(demolition.items,'total_labor');
+  demolition.subtotal=sumBy(demolition.items,'total');
+  return demolition;
+}
+function rollupProfessionals(prof){
+  prof.total=roundMoney((Number(prof.architect)||0)+(Number(prof.structural_engineer)||0)+(Number(prof.supervisor_total)||0));
+  return prof;
+}
+function recalculateBomRollups(bom){
+  bom.units=(bom.units||[]).map(unit=>rollupBomContainer(unit));
+  if(bom.common_areas) rollupBomContainer(bom.common_areas);
+  if(bom.demolition) rollupDemolition(bom.demolition);
+  if(bom.professionals) rollupProfessionals(bom.professionals);
+  const totalMat=sumBy(bom.units,'subtotal_mat') + (bom.common_areas?.subtotal_mat||0);
+  const totalLabor=sumBy(bom.units,'subtotal_labor') + (bom.common_areas?.subtotal_labor||0);
+  const totalDemolition=roundMoney(bom.demolition?.subtotal||0);
+  bom.summary={
+    ...(bom.summary||{}),
+    total_mat:roundMoney(totalMat),
+    total_labor:roundMoney(totalLabor),
+    total_demolition:totalDemolition,
+    total_professionals:roundMoney(bom.professionals?.total||0),
+    total:roundMoney(totalMat + totalLabor + totalDemolition + (bom.professionals?.total||0)),
+    units_count:(bom.units||[]).length,
+    currency:(bom.summary?.currency)||'EUR',
+    last_checked:lastPriceRefreshState.checked_at || ''
+  };
+  return bom;
+}
+function renderBomSummary(bom){
+  const s=bom.summary||{};
+  const tl=bom.timeline||{};
+  document.getElementById('s6sum').innerHTML=`
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-top:12px;">
+        <div class="bom-kpi"><div class="bom-kpi-l">חומרים</div><div class="bom-kpi-v">${fmt(s.total_mat)}</div></div>
+        <div class="bom-kpi"><div class="bom-kpi-l">עבודה</div><div class="bom-kpi-v">${fmt(s.total_labor)}</div></div>
+        <div class="bom-kpi"><div class="bom-kpi-l">הריסות</div><div class="bom-kpi-v">${fmt(s.total_demolition)}</div></div>
+        <div class="bom-kpi"><div class="bom-kpi-l">אנשי מקצוע</div><div class="bom-kpi-v">${fmt(s.total_professionals)}</div></div>
+        <div class="bom-kpi wide" style="background:var(--gold-dim);border-color:rgba(232,184,75,0.4);">
+          <div class="bom-kpi-l">סה"כ פרויקט</div>
+          <div class="bom-kpi-v" style="font-size:20px;">${fmt(s.total)}</div>
+        </div>
+      </div>
+      <div style="margin-top:8px;font-size:10px;color:var(--t3);">מקור מחירים: ${esc(lastPriceRefreshState.mode)} · נבדק: ${esc(fmtChecked(lastPriceRefreshState.checked_at))} · ${esc(lastPriceRefreshState.note||'')}</div>
+      ${tl.total_weeks?`<div style="margin-top:10px;background:var(--s2);border:1px solid var(--border);border-radius:8px;padding:10px;">
+        <div style="font-size:10px;font-weight:800;color:var(--t3);text-transform:uppercase;letter-spacing:0.7px;margin-bottom:6px;">⏱️ לוח זמנים — ${Number(tl.total_weeks)||0} שבועות</div>
+        ${(tl.phases||[]).map(ph=>`<div style="display:flex;justify-content:space-between;font-size:11px;padding:3px 0;border-bottom:1px solid var(--border);">
+          <span style="color:var(--t2);">${esc(ph.name)}</span>
+          <span style="color:var(--gold);font-weight:700;">${Number(ph.weeks)||0} שבועות</span>
+        </div>`).join('')}
+      </div>`:''}
+      ${bom.professionals?.architect?`<div style="margin-top:8px;background:var(--s2);border:1px solid var(--border);border-radius:8px;padding:10px;">
+        <div style="font-size:10px;font-weight:800;color:var(--t3);text-transform:uppercase;letter-spacing:0.7px;margin-bottom:6px;">👷 אנשי מקצוע</div>
+        <div style="font-size:11px;color:var(--t2);">אדריכל: <span style="color:var(--text)">${fmt(bom.professionals.architect)}</span></div>
+        <div style="font-size:11px;color:var(--t2);">מהנדס קונסטרוקציה: <span style="color:var(--text)">${fmt(bom.professionals.structural_engineer)}</span></div>
+        <div style="font-size:11px;color:var(--t2);">מפקח בנייה (${Number(bom.professionals.supervisor_months)||0} חודשים): <span style="color:var(--text)">${fmt(bom.professionals.supervisor_total)}</span></div>
+      </div>`:''}`;
+}
+function applyBomToUi(bom){
+  currentBOM=recalculateBomRollups(bom);
+  renderBOM(currentBOM);
+  renderBomSummary(currentBOM);
+  document.getElementById('expBtn').disabled=false;
+}
+function shouldAutoRecalc(){
+  return currentStep>=2 && units.length>0;
+}
+function scheduleBOMRecalc(reason='change'){
+  bomDirtyReason=reason;
+  if(!shouldAutoRecalc()) return;
+  clearTimeout(bomAutoTimer);
+  bomAutoTimer=setTimeout(()=>{ generateBOM({silent:true, refreshPrices:false, notifyOnDone:false}); },180);
+}
 document.addEventListener('DOMContentLoaded',function(){
   document.querySelectorAll('.ftoggle-row').forEach(row=>{
     row.querySelectorAll('.ftoggle').forEach(btn=>{
-      btn.addEventListener('click',()=>{ row.querySelectorAll('.ftoggle').forEach(b=>b.classList.remove('active')); btn.classList.add('active'); });
+      btn.addEventListener('click',()=>{ row.querySelectorAll('.ftoggle').forEach(b=>b.classList.remove('active')); btn.classList.add('active'); scheduleBOMRecalc('toggle'); });
     });
   });
   const yearInput=document.getElementById('buildYear');
   if(yearInput){ yearInput.max=String(new Date().getFullYear()); }
+  const formArea=document.getElementById('formArea');
+  if(formArea){
+    formArea.addEventListener('change',e=>{ if(e.target?.type!=='file') scheduleBOMRecalc('form-change'); });
+    formArea.addEventListener('input',e=>{
+      const tag=(e.target?.tagName||'').toLowerCase();
+      if(tag==='input' || tag==='select' || tag==='textarea') scheduleBOMRecalc('form-input');
+    });
+  }
 });
-
 function tryGo(n){ if(n<=currentStep) goStep(n); }
 function goStep(n){
   currentStep=n;
@@ -974,7 +1091,6 @@ function goStep(n){
   });
   document.getElementById('genBtn').disabled=(n<6);
 }
-
 function next(from){
   if(from===1){ goStep(2); initUnits(); }
   else if(from===2){ if(!units.length){showErr('err2','הוסף לפחות יחידה אחת');return;} goStep(3); buildWallsStep(); }
@@ -982,16 +1098,16 @@ function next(from){
   else if(from===4){ goStep(5); buildImageStep(); }
   else if(from===5){ goStep(6); generateBOM(); }
 }
-
 let wallCounter=0;
 function addWall(scope){
   wallCounter++;
   if(!walls[scope]) walls[scope]=[];
   walls[scope].push({id:wallCounter,type:'plasterboard',sqm:1,action:'build',notes:''});
   renderWalls(scope);
+  scheduleBOMRecalc('add-wall');
 }
-function delWall(scope,id){ walls[scope]=walls[scope].filter(w=>w.id!==id); renderWalls(scope); }
-function updWall(scope,id,f,v){ const w=walls[scope]?.find(w=>w.id===id); if(w) w[f]=v; }
+function delWall(scope,id){ walls[scope]=walls[scope].filter(w=>w.id!==id); renderWalls(scope); scheduleBOMRecalc('delete-wall'); }
+function updWall(scope,id,f,v){ const w=walls[scope]?.find(w=>w.id===id); if(w) w[f]=v; scheduleBOMRecalc('update-wall'); }
 function renderWalls(scope){
   const containerId = scope==='bldg' ? 'bldgWalls' : `walls-${scope}`;
   const container = document.getElementById(containerId);
@@ -1020,7 +1136,6 @@ function renderWalls(scope){
     container.appendChild(div);
   });
 }
-
 function buildWallsStep(){
   const wrap=document.getElementById('unitWallsWrap'); wrap.innerHTML='';
   units.forEach(u=>{
@@ -1038,13 +1153,11 @@ function buildWallsStep(){
     renderWalls(u.id);
   });
 }
-
 function initUnits(){
   document.getElementById('s2sub').textContent=`${tg('tg-type')} · ${numVal('totalSize',200)}מ"ר · ${numVal('floors',3)} קומות`;
   if(!units.length) addUnit();
   else renderUnits();
 }
-
 function addUnit(){
   uid++;
   units.push({id:uid,name:`יחידה ${uid}`,floor:1,size:35,rooms:'1',finish:'Mid',
@@ -1053,11 +1166,10 @@ function addUnit(){
     notes:''});
   images[uid]=[];
   renderUnits();
+  scheduleBOMRecalc('add-unit');
 }
-
-function delUnit(id){ units=units.filter(u=>u.id!==id); delete walls[id]; delete images[id]; renderUnits(); }
-function upd(id,f,v){ const u=units.find(u=>u.id===id); if(u) u[f]=v; }
-
+function delUnit(id){ units=units.filter(u=>u.id!==id); delete walls[id]; delete images[id]; renderUnits(); scheduleBOMRecalc('delete-unit'); }
+function upd(id,f,v){ const u=units.find(u=>u.id===id); if(u) u[f]=v; scheduleBOMRecalc('update-unit'); }
 function renderUnits(){
   const w=document.getElementById('unitsWrap');
   const scrollY=document.getElementById('formArea')?.scrollTop||0;
@@ -1139,14 +1251,13 @@ function renderUnits(){
   });
   if(scrollY) setTimeout(()=>{ const fa=document.getElementById('formArea'); if(fa) fa.scrollTop=scrollY; },10);
 }
-
 function toggleUC(id,f,el){
   el.classList.toggle('on');
   el.querySelector('.fcheck-box').textContent=el.classList.contains('on')?'✓':'';
   upd(id,f,el.classList.contains('on'));
   if(['elec','bath','kitchen'].includes(f)) renderUnits();
+  scheduleBOMRecalc('toggle-scope');
 }
-
 function buildProdSections(){
   const w=document.getElementById('prodWrap'); w.innerHTML='';
   Object.entries(CAT).forEach(([key,cat])=>{
@@ -1190,7 +1301,6 @@ function buildProdSections(){
     w.appendChild(div);
   });
 }
-
 function toggleCat(key){
   const cb=document.getElementById('cb-'+key), arr=document.getElementById('arr-'+key);
   cb.classList.toggle('open'); arr.textContent=cb.classList.contains('open')?'▴':'▾';
@@ -1201,17 +1311,20 @@ function setPM(key,mode,btn){
   document.getElementById('ga-'+key).style.display=mode==='grade'?'block':'none';
   document.getElementById('sa-'+key).style.display=mode==='specific'?'block':'none';
   updateBadge(key);
+  scheduleBOMRecalc('product-mode');
 }
 function setGr(key,grade,el){
   selProds[key].grade=grade;
   el.closest('.ftoggle-row').querySelectorAll('.ftoggle').forEach(b=>b.classList.remove('active')); el.classList.add('active');
   updateBadge(key);
+  scheduleBOMRecalc('finish-grade');
 }
 function selProd(key,pid,el){
   selProds[key].pid=pid;
   el.closest('.prod-grid').querySelectorAll('.prod-item').forEach(i=>{i.classList.remove('sel');i.querySelector('.prod-check').textContent='';});
   el.classList.add('sel'); el.querySelector('.prod-check').textContent='✓';
   updateBadge(key);
+  scheduleBOMRecalc('product-select');
 }
 function updateBadge(key){
   const sel=selProds[key],cat=CAT[key],b=document.getElementById('badge-'+key);
@@ -1219,7 +1332,6 @@ function updateBadge(key){
   b.className=`cat-badge ${sel.mode}`;
   b.textContent=sel.mode==='specific'&&sel.pid?cat.products.find(p=>p.id===sel.pid)?.name.split(' ').slice(0,3).join(' ')||'ספציפי':sel.grade;
 }
-
 function syncImageUi(scope){
   const isBuilding=scope==='bldg';
   const list=images[scope]||[];
@@ -1234,7 +1346,6 @@ function syncImageUi(scope){
   }
   if(btn) btn.disabled=!list.length;
 }
-
 function buildImageStep(){
   const wrap=document.getElementById('unitImagesWrap'); wrap.innerHTML='';
   units.forEach(u=>{
@@ -1256,7 +1367,6 @@ function buildImageStep(){
   syncImageUi('bldg');
   units.forEach(u=>{ renderPreviews(u.id); syncImageUi(u.id); });
 }
-
 function handleImages(scope,input){
   const files=Array.from(input.files||[]);
   if(!files.length) return;
@@ -1278,7 +1388,6 @@ function handleImages(scope,input){
     if(input) input.value='';
   });
 }
-
 function renderPreviews(scope){
   const container=document.getElementById(scope==='bldg'?'bldg-previews':`pv-${scope}`);
   if(!container) return;
@@ -1289,7 +1398,6 @@ function renderPreviews(scope){
     container.appendChild(d);
   });
 }
-
 function delImage(scope,i){
   if(!images[scope]) return;
   images[scope].splice(i,1);
@@ -1307,7 +1415,6 @@ async function analyzeImages(scope){
   const anDiv=document.getElementById(scope==='bldg'?'bldg-analysis':`an-${scope}`);
   if(btn) btn.disabled=true;
   if(anDiv){ anDiv.textContent='🤖 מנתח תמונות...'; anDiv.classList.add('show'); }
-
   const content=[
     ...imgs.slice(0,4).map(img=>({type:'image',source:{type:'base64',media_type:img.type,data:img.b64}})),
     {type:'text',text:`אתה מומחה שיפוצים. נתח את התמונות ותן:
@@ -1317,7 +1424,6 @@ async function analyzeImages(scope){
 4. הערכת רמת השיפוץ הנדרש (קוסמטי/יסודי/מקיף)
 ענה בעברית, קצר וממוקד.`}
   ];
-
   try{
     const r=await fetch('https://api.anthropic.com/v1/messages',{
       method:'POST',
@@ -1333,52 +1439,915 @@ async function analyzeImages(scope){
     syncImageUi(scope);
   }
 }
-
-async function callAPI(prompt, prefill='') {
-  const apiKey=ensureApiKey();
-  if(!apiKey) throw new Error('Missing Anthropic API key');
-  const SYS = `You are a renovation cost expert in Athens, Greece 2025-2026.
-Labor rates: electrician 25-45€/hr, plumber 20-35€/hr, tiler 8-16€/sqm, tradesman 41-60€/day, unskilled 35-45€/day, plasterer 8-14€/sqm, painter 4-8€/sqm, AC install 100-150€, door install 100-180€, window install 60-120€.
-3-phase electrical panel (trifasiko): 350-600€ supply + 150-250€ install. Socket/switch: 15-25€. Lighting point: 20-35€. Full rewire per sqm: 35-45€.
-Demolition: floor removal 5-8€/sqm, wall demolition 12-20€/sqm, debris removal 200-400€/load.
-Professionals (CORRECTED Athens 2025 rates): Supervisor visit 50-150€/visit (2x/week = 400-1200€/month). Structural engineer: 800-1500€ fixed for renovation. Architect renovation plan: 800-2000€ fixed. Building permit prep: 300-600€.
-Return ONLY valid compact JSON. No explanation. No markdown.`;
-  const msgs = [{role:'user', content:prompt}];
-  if(prefill) msgs.push({role:'assistant', content:prefill});
-
-  const r = await fetch('https://api.anthropic.com/v1/messages',{
-    method:'POST',
-    headers:{'Content-Type':'application/json','x-api-key':apiKey,'anthropic-version':'2023-06-01','anthropic-dangerous-direct-browser-access':'true'},
-    body:JSON.stringify({model:'claude-sonnet-4-20250514', max_tokens:5000, system:SYS, messages:msgs})
-  });
-  if(!r.ok){ const e=await r.json(); throw new Error(e.error?.message||'HTTP '+r.status); }
-  const data = await r.json();
-  const txt = (prefill||'') + (data.content?.map(b=>b.text||'').join('')||'');
-  if(data.stop_reason==='max_tokens') console.warn('Response truncated!');
-  return txt;
+function roundMoney(value){ return Math.round(((Number(value)||0)+Number.EPSILON)*100)/100; }
+function sumBy(list, field){ return roundMoney((list||[]).reduce((sum,item)=>sum+(Number(item?.[field])||0),0)); }
+function clamp(value, min, max){ return Math.max(min, Math.min(max, value)); }
+function finishWeight(grade){ return ({Basic:0.9,Mid:1,Luxury:1.22}[grade]||1); }
+function getLeadSupplier(category){ return (SUPPLIERS[category]||[])[0]?.name || 'Local supplier'; }
+function getLeadSupplierUrl(category){ return (SUPPLIERS[category]||[])[0]?.url || ''; }
+function requestedGrade(catKey, fallback='Mid'){
+  const sel=selProds[catKey];
+  if(!sel || sel.mode!=='grade') return fallback||'Mid';
+  if(sel.grade && (sel.grade!=='Mid' || fallback==='Mid')) return sel.grade;
+  return fallback || sel.grade || 'Mid';
 }
-
-function parseJSON(txt) {
-  txt = txt.replace(/```json\s*/gi,'').replace(/```\s*/g,'').trim();
-  try { return JSON.parse(txt); } catch(e){}
-  const firstBrace = txt.indexOf('{');
-  const firstBracket = txt.indexOf('[');
-  const start = firstBrace>=0 && (firstBracket<0 || firstBrace<firstBracket) ? firstBrace : firstBracket;
-  if(start>=0) {
-    const end = txt.lastIndexOf(txt[start]==='{' ? '}' : ']');
-    if(end>start) try { return JSON.parse(txt.substring(start, end+1)); } catch(e){}
+function getCatalogProduct(catKey, fallbackGrade='Mid', predicate=null){
+  const cat=CAT[catKey];
+  if(!cat) return null;
+  const sel=selProds[catKey];
+  if(sel?.mode==='specific' && sel.pid){
+    const exact=cat.products.find(p=>p.id===sel.pid);
+    if(exact && (!predicate || predicate(exact))) return exact;
   }
-  const arrMatch = txt.match(/(\[[\s\S]*\])/);
-  if(arrMatch) try { return JSON.parse(arrMatch[1]); } catch(e){}
-  const objMatch = txt.match(/(\{[\s\S]*\})/);
-  if(objMatch) try { return JSON.parse(objMatch[1]); } catch(e){}
-  throw new Error('Could not parse JSON from response');
+  let pool=cat.products.slice();
+  if(predicate){
+    const filtered=pool.filter(predicate);
+    if(filtered.length) pool=filtered;
+  }
+  const preferred=requestedGrade(catKey, fallbackGrade||'Mid');
+  let graded=pool.filter(p=>p.grade===preferred);
+  if(!graded.length && fallbackGrade && fallbackGrade!==preferred) graded=pool.filter(p=>p.grade===fallbackGrade);
+  if(!graded.length) graded=pool;
+  const sorted=graded.slice().sort((a,b)=>a.price-b.price);
+  return sorted[Math.floor((sorted.length-1)/2)] || pool[0] || cat.products[0] || null;
 }
-
-async function generateBOM(){
-  document.getElementById('loading').classList.add('show');
+function makeBomItem(data){
+  const qty=roundMoney(data.qty ?? 1);
+  const unitMat=roundMoney(data.unit_mat ?? 0);
+  const unitLabor=roundMoney(data.unit_labor ?? 0);
+  const totalMat=roundMoney(data.total_mat ?? qty*unitMat);
+  const totalLabor=roundMoney(data.total_labor ?? qty*unitLabor);
+  const total=roundMoney(data.total ?? totalMat+totalLabor);
+  return {
+    bom_ref:data.bom_ref || `line-${++bomLineCounter}`,
+    name:data.name || '',
+    cat_ref:data.cat_ref || '',
+    supplier:data.supplier || '—',
+    link:data.link || '',
+    qty,
+    unit:data.unit || "יח'",
+    unit_mat:unitMat,
+    unit_labor:unitLabor,
+    total_mat:totalMat,
+    total_labor:totalLabor,
+    total,
+    category:data.category || '',
+    price_key:data.price_key || '',
+    price_source:data.price_source || (unitMat>0 ? 'default' : 'rule'),
+    last_checked:data.last_checked || nowIso(),
+    note:data.note || ''
+  };
+}
+function makeCatalogItem(catKey, fallbackGrade, overrides={}){
+  const product=overrides.product || getCatalogProduct(catKey, fallbackGrade, overrides.predicate || null);
+  if(!product) return null;
+  const priceKey=linePriceKey(catKey, product);
+  const cached=getCachedPriceEntry(priceKey);
+  const resolvedUnitMat=roundMoney(overrides.unit_mat ?? cached?.price ?? product.price);
+  const priceSource=overrides.price_source || (cached ? 'cached' : 'default');
+  const noteParts=[overrides.note, cached?.note, cached ? 'מחיר מטמון מקומי' : 'מחיר קטלוג מקומי'].filter(Boolean);
+  return makeBomItem({
+    name:overrides.name || product.name,
+    cat_ref:overrides.cat_ref || product.cat,
+    supplier:overrides.supplier || product.supplier,
+    link:overrides.link || product.link,
+    qty:overrides.qty ?? 1,
+    unit:overrides.unit || product.unit,
+    unit_mat:resolvedUnitMat,
+    unit_labor:overrides.unit_labor ?? 0,
+    total_mat:overrides.total_mat,
+    total_labor:overrides.total_labor,
+    total:overrides.total,
+    price_key:priceKey,
+    price_source:priceSource,
+    last_checked:overrides.last_checked || cached?.last_checked || '',
+    note:noteParts.join(' · ')
+  });
+}
+function makeCategory(name, emoji, items){
+  const cleanItems=(items||[]).filter(item=>item && Number(item.total)>0).map(item=>normalizeBomLine({...item, category:item.category || name}, name));
+  if(!cleanItems.length) return null;
+  return {
+    name,
+    emoji,
+    subtotal_mat:sumBy(cleanItems,'total_mat'),
+    subtotal_labor:sumBy(cleanItems,'total_labor'),
+    subtotal:sumBy(cleanItems,'total'),
+    items:cleanItems
+  };
+}
+function makeUnitBom(name, floor, size, finish, categories){
+  const cleanCategories=(categories||[]).filter(Boolean);
+  return {
+    name,
+    floor,
+    size_sqm:size,
+    finish,
+    subtotal_mat:sumBy(cleanCategories,'subtotal_mat'),
+    subtotal_labor:sumBy(cleanCategories,'subtotal_labor'),
+    subtotal:sumBy(cleanCategories,'subtotal'),
+    categories:cleanCategories
+  };
+}
+function roomCount(rooms){
+  if(rooms==='studio') return 0;
+  if(rooms==='4+') return 4;
+  return Number.parseInt(rooms,10) || 1;
+}
+function bathroomCount(u){
+  const rooms=roomCount(u.rooms);
+  if(u.size>=85 || rooms>=3) return 2;
+  return 1;
+}
+function occupantCount(u){
+  const rooms=roomCount(u.rooms);
+  if(!rooms) return 2;
+  return clamp(rooms+1,2,6);
+}
+function conditionProfile(condition){
+  const map={
+    'ריק ישן (לפני 1990)':{finish:1.18,mep:1.2,demo:1.2,openings:0.85},
+    'ריק בינוני (1990-2010)':{finish:1,mep:1,demo:1,openings:0.6},
+    'ריק חדש (אחרי 2010)':{finish:0.82,mep:0.78,demo:0.45,openings:0.15},
+    'מאוכלס דורש שיפוץ':{finish:1.05,mep:0.95,demo:0.8,openings:0.45},
+    'גולמי ללא גמר':{finish:1.12,mep:0.9,demo:0.2,openings:0.05},
+  };
+  return map[condition] || map['ריק בינוני (1990-2010)'];
+}
+function estimatedPaintArea(u){
+  const addedWalls=(walls[u.id]||[]).filter(w=>w.type!=='demolish').reduce((sum,w)=>sum+(Number(w.sqm)||0),0);
+  return roundMoney((u.size*2.9)+(roomCount(u.rooms)*8)+(addedWalls*1.15));
+}
+function wallBuildItems(scope){
+  return (walls[scope]||[])
+    .filter(w=>w.type!=='demolish')
+    .map(w=>{
+      const wt=WALL_TYPES.find(t=>t.id===w.type);
+      if(!wt) return null;
+      return makeBomItem({
+        name:wt.label,
+        cat_ref:wt.id,
+        supplier:wt.supplier,
+        link:wt.link,
+        qty:Number(w.sqm)||0,
+        unit:wt.unit,
+        unit_mat:wt.mat_price,
+        unit_labor:wt.labor_price
+      });
+    })
+    .filter(Boolean);
+}
+function wallDemolitionItems(scope, prefix=''){
+  return (walls[scope]||[])
+    .filter(w=>w.type==='demolish')
+    .map(w=>makeBomItem({
+      name:`${prefix}הריסת קיר`,
+      cat_ref:'demolish',
+      supplier:'קבלן הריסה',
+      qty:Number(w.sqm)||0,
+      unit:'מ"ר',
+      unit_mat:0,
+      unit_labor:16
+    }));
+}
+function pickNamedFurnitureProduct(fallbackGrade, pattern){
+  return getCatalogProduct('furniture', fallbackGrade, p=>pattern.test(p.name));
+}
+function collectPriceRefreshRequestsFromBom(bom){
+  const requests=[];
+  const seen=new Set();
+  const collectItems=(items, unitName='')=>{
+    (items||[]).forEach(item=>{
+      if(!item?.price_key || !item.link || seen.has(item.price_key)) return;
+      seen.add(item.price_key);
+      requests.push({
+        key:item.price_key,
+        name:item.name,
+        supplier:item.supplier,
+        url:item.link,
+        category:item.category || unitName,
+        current_price:item.unit_mat,
+        unit:item.unit
+      });
+    });
+  };
+  (bom.units||[]).forEach(unit=>(unit.categories||[]).forEach(cat=>collectItems(cat.items,cat.name)));
+  (bom.common_areas?.categories||[]).forEach(cat=>collectItems(cat.items,cat.name));
+  return requests;
+}
+function applyPriceEntryToLine(item, entry){
+  if(!entry) return item;
+  const qty=Number(item.qty)||1;
+  const laborUnit=Number(item.unit_labor)||0;
+  const materialUnit=roundMoney(entry.price);
+  item.unit_mat=materialUnit;
+  item.total_mat=roundMoney(materialUnit*qty);
+  item.total_labor=roundMoney(laborUnit*qty);
+  item.total=roundMoney(item.total_mat + item.total_labor);
+  item.price_source=entry.price_source || item.price_source || 'default';
+  item.last_checked=entry.last_checked || item.last_checked || '';
+  item.note=entry.note || item.note || '';
+  return item;
+}
+async function refreshBomPrices(bom){
+  const requests=collectPriceRefreshRequestsFromBom(bom);
+  if(!requests.length){
+    lastPriceRefreshState={mode:'rules-only',checked_at:nowIso(),note:'לא נמצאו שורות מוצר לרענון מחיר.'};
+    return bom;
+  }
+  const proxyUrl=getPriceProxyUrl();
+  if(!proxyUrl){
+    lastPriceRefreshState={mode:'default',checked_at:nowIso(),note:'לא הוגדר price proxy, נעשה שימוש במחירי קטלוג/מטמון.'};
+    return bom;
+  }
+  try{
+    const response=await fetch(proxyUrl,{
+      method:'POST',
+      headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({products:requests})
+    });
+    if(!response.ok) throw new Error(`HTTP ${response.status}`);
+    const payload=await response.json();
+    const rows=Array.isArray(payload) ? payload : (payload.prices||[]);
+    const liveMap={};
+    rows.forEach(row=>{
+      const key=String(row.key||'').trim();
+      const price=Number(row.price);
+      if(!key || !Number.isFinite(price) || price<=0) return;
+      const entry={
+        price:roundMoney(price),
+        last_checked:row.last_checked || nowIso(),
+        note:row.note || 'רענון מחיר חי',
+        price_source:'live'
+      };
+      liveMap[key]=entry;
+      setCachedPriceEntry(key,entry);
+    });
+    const fallbackCount=requests.filter(req=>!liveMap[req.key]).length;
+    const fallbackNote=fallbackCount ? `חלק מהמחירים לא חזרו מהרענון; נשמר fallback ל-${fallbackCount} שורות.` : 'כל מחירי הספקים עודכנו חי.';
+    const updateItems=(items)=>{
+      (items||[]).forEach(item=>{
+        if(item.price_key && liveMap[item.price_key]){
+          applyPriceEntryToLine(item,{...liveMap[item.price_key], note:liveMap[item.price_key].note || 'רענון מחיר חי'});
+        }else if(item.price_key){
+          const cached=getCachedPriceEntry(item.price_key);
+          if(cached){
+            applyPriceEntryToLine(item,{...cached, price_source:'cached', note:'רענון חי חסר, שימוש במטמון'});
+          }else{
+            item.price_source='default';
+            item.last_checked=item.last_checked || nowIso();
+            item.note='רענון חי לא זמין, שימוש במחיר קטלוג';
+          }
+        }
+      });
+    };
+    (bom.units||[]).forEach(unit=>(unit.categories||[]).forEach(cat=>updateItems(cat.items)));
+    (bom.common_areas?.categories||[]).forEach(cat=>updateItems(cat.items));
+    lastPriceRefreshState={
+      mode:fallbackCount ? 'live+fallback' : 'live',
+      checked_at:nowIso(),
+      note:fallbackNote
+    };
+    return bom;
+  }catch(error){
+    const updateItems=(items)=>{
+      (items||[]).forEach(item=>{
+        if(!item.price_key) return;
+        const cached=getCachedPriceEntry(item.price_key);
+        if(cached){
+          applyPriceEntryToLine(item,{...cached, price_source:'cached', note:'רענון חי נכשל, שימוש במטמון'});
+        }else{
+          item.price_source='default';
+          item.last_checked=item.last_checked || nowIso();
+          item.note='רענון חי נכשל, שימוש במחיר קטלוג';
+        }
+      });
+    };
+    (bom.units||[]).forEach(unit=>(unit.categories||[]).forEach(cat=>updateItems(cat.items)));
+    (bom.common_areas?.categories||[]).forEach(cat=>updateItems(cat.items));
+    lastPriceRefreshState={mode:'fallback',checked_at:nowIso(),note:`רענון מחירים נכשל: ${error.message}`};
+    return bom;
+  }
+}
+function finishCategory(u, bldg){
+  const profile=conditionProfile(bldg.condition);
+  const area=estimatedPaintArea(u);
+  const factor=finishWeight(u.finish);
+  const items=[
+    makeBomItem({
+      name:'שפכטל / תיקוני טיח',
+      cat_ref:'FIN-PLASTER',
+      supplier:'Marmoline',
+      link:'https://marmoline.gr/',
+      qty:area,
+      unit:'מ"ר',
+      unit_mat:roundMoney(1.8*profile.finish*factor),
+      unit_labor:roundMoney(3.6*profile.finish)
+    }),
+    makeBomItem({
+      name:'צבע פנים 2 שכבות',
+      cat_ref:'FIN-PAINT',
+      supplier:'Vechro',
+      link:'https://www.vechro.gr/',
+      qty:area,
+      unit:'מ"ר',
+      unit_mat:roundMoney(1.5*factor),
+      unit_labor:roundMoney(4.8*profile.finish)
+    })
+  ];
+  if(bldg.condition==='גולמי ללא גמר'){
+    items.unshift(makeBomItem({
+      name:'פריימר ויישור התחלתי',
+      cat_ref:'FIN-PRIMER',
+      supplier:'Isomat',
+      link:'https://www.isomat.gr/',
+      qty:area,
+      unit:'מ"ר',
+      unit_mat:2.4,
+      unit_labor:2.6
+    }));
+  }
+  return makeCategory('גמרים וצבע','🎨',items);
+}
+function flooringCategory(u, bldg){
+  const profile=conditionProfile(bldg.condition);
+  const floorChoice=getCatalogProduct('flooring', u.finish);
+  if(!floorChoice) return null;
+  const qty=roundMoney(u.size*1.08);
+  return makeCategory('ריצוף','🪵',[
+    makeCatalogItem('flooring', u.finish, {
+      product:floorChoice,
+      qty,
+      unit:'מ"ר',
+      unit_labor:roundMoney(11.5*profile.finish)
+    }),
+    makeBomItem({
+      name:'דבק, רובה ופילוס',
+      cat_ref:'FLR-ADH',
+      supplier:'Isomat',
+      link:'https://www.isomat.gr/',
+      qty:u.size,
+      unit:'מ"ר',
+      unit_mat:4.4,
+      unit_labor:1.8
+    }),
+    makeBomItem({
+      name:'פנלים וספים',
+      cat_ref:'FLR-SKIRT',
+      supplier:'Leroy Merlin',
+      link:'https://www.leroymerlin.gr/',
+      qty:roundMoney(Math.max(18,u.size*0.55)),
+      unit:'מ"א',
+      unit_mat:roundMoney(4.2*finishWeight(u.finish)),
+      unit_labor:2.4
+    })
+  ]);
+}
+function electricalCategory(u, bldg){
+  const profile=conditionProfile(bldg.condition);
+  const endpoints=Math.max(1,(Number(u.elec_sockets)||0)+(Number(u.elec_switches)||0));
+  const panelPattern=u.elec_3phase ? /3-Phase|3phase|trifasiko|תלת|μεγάλο/i : /1-Phase|1phase|μονο|חד/i;
+  const panel=getCatalogProduct('elec_panel', u.finish, p=>panelPattern.test(p.name));
+  const endpointKit=getCatalogProduct('elec_sockets', u.finish);
+  const lightingChoice=getCatalogProduct('lighting', u.finish);
+  const lightingQty=lightingChoice ? (lightingChoice.unit==='ערכה' ? Math.max(1,Math.ceil((Number(u.elec_lights)||0)/4)) : Math.max(1,Number(u.elec_lights)||0)) : 0;
+  const items=[];
+  if(panel){
+    items.push(makeCatalogItem('elec_panel', u.finish, {
+      product:panel,
+      qty:1,
+      unit_labor:u.elec_3phase ? 210 : 85
+    }));
+  }
+  if(endpointKit){
+    items.push(makeCatalogItem('elec_sockets', u.finish, {
+      product:endpointKit,
+      name:`ציוד קצה ${u.elec_brand || endpointKit.supplier}`,
+      qty:Math.max(1,Math.ceil(endpoints/10)),
+      unit_labor:24
+    }));
+  }
+  items.push(makeBomItem({
+    name:'חיווט, קופסאות וצנרת חשמל',
+    cat_ref:'ELEC-ROUGHIN',
+    supplier:getLeadSupplier('electrical'),
+    link:getLeadSupplierUrl('electrical'),
+    qty:u.size,
+    unit:'מ"ר',
+    unit_mat:roundMoney((u.elec_3phase ? 10.5 : 8.5)*profile.mep),
+    unit_labor:roundMoney((u.elec_3phase ? 19.5 : 17)*profile.mep)
+  }));
+  if(lightingChoice && lightingQty>0){
+    items.push(makeCatalogItem('lighting', u.finish, {
+      product:lightingChoice,
+      qty:lightingQty,
+      unit:lightingChoice.unit,
+      unit_labor:20
+    }));
+  }
+  if((Number(u.elec_ac_points)||0)>0){
+    items.push(makeBomItem({
+      name:'הכנת נקודות כוח למיזוג',
+      cat_ref:'ELEC-AC-POINT',
+      supplier:getLeadSupplier('electrical'),
+      link:getLeadSupplierUrl('electrical'),
+      qty:Number(u.elec_ac_points)||0,
+      unit:"נק'",
+      unit_mat:48,
+      unit_labor:36
+    }));
+  }
+  return makeCategory('חשמל','⚡',items);
+}
+function plumbingCategory(u, bldg){
+  const profile=conditionProfile(bldg.condition);
+  const baths=bathroomCount(u);
+  const points=(baths*4)+(u.kitchen ? 3 : 0);
+  const items=[
+    makeBomItem({
+      name:'צנרת מים וניקוז',
+      cat_ref:'PLUMB-ROUGHIN',
+      supplier:'Interplast',
+      link:'https://www.interplast.gr/',
+      qty:u.size,
+      unit:'מ"ר',
+      unit_mat:roundMoney(7.2*profile.mep),
+      unit_labor:roundMoney(11.8*profile.mep)
+    }),
+    makeBomItem({
+      name:'מחברים, סיפונים וברזי ניתוק',
+      cat_ref:'PLUMB-FITTINGS',
+      supplier:'Brass Form',
+      link:'https://www.brassform.gr/',
+      qty:Math.max(3,points),
+      unit:"נק'",
+      unit_mat:26,
+      unit_labor:18
+    })
+  ];
+  if(u.solar){
+    items.push(makeBomItem({
+      name:'חיבורי חם/קר לדוד שמש',
+      cat_ref:'PLUMB-SOLAR',
+      supplier:'Thermovent',
+      link:'https://www.thermovent.gr/',
+      qty:1,
+      unit:"יח'",
+      unit_mat:65,
+      unit_labor:55
+    }));
+  }
+  return makeCategory('תשתיות אינסטלציה','🔧',items);
+}
+function bathroomCategory(u, bldg){
+  const baths=bathroomCount(u);
+  const profile=conditionProfile(bldg.condition);
+  const tileChoice=getCatalogProduct('wall_tiles', u.finish);
+  const tileArea=roundMoney(baths*(u.size>55 ? 20 : 16)*1.08);
+  const items=[];
+  const toiletChoice=getCatalogProduct('toilet', u.finish);
+  const basinChoice=getCatalogProduct('basin', u.finish);
+  const faucetChoice=getCatalogProduct('faucet', u.finish);
+  const showerChoice=getCatalogProduct('shower', u.finish);
+  if(toiletChoice) items.push(makeCatalogItem('toilet', u.finish, {product:toiletChoice, qty:baths, unit_labor:100}));
+  if(basinChoice) items.push(makeCatalogItem('basin', u.finish, {product:basinChoice, qty:baths, unit_labor:55}));
+  if(faucetChoice) items.push(makeCatalogItem('faucet', u.finish, {product:faucetChoice, qty:baths, unit_labor:28}));
+  if(showerChoice) items.push(makeCatalogItem('shower', u.finish, {product:showerChoice, qty:baths, unit_labor:145}));
+  if(tileChoice){
+    items.push(makeCatalogItem('wall_tiles', u.finish, {
+      product:tileChoice,
+      name:'חיפוי קירות רחצה + איטום',
+      qty:tileArea,
+      unit:'מ"ר',
+      unit_mat:roundMoney(tileChoice.price + 3.6*finishWeight(u.finish)),
+      unit_labor:roundMoney(14.5*profile.finish)
+    }));
+  }
+  return makeCategory('חדר רחצה','🚿',items);
+}
+function kitchenRunLength(u){
+  const base=u.size<=30 ? 2 : (u.size<=55 ? 2.8 : 3.6);
+  return roundMoney(base + (roomCount(u.rooms)>=3 ? 0.4 : 0));
+}
+function kitchenCategory(u){
+  const runM=kitchenRunLength(u);
+  const tileChoice=getCatalogProduct('wall_tiles', u.finish);
+  const items=[];
+  const cabinetChoice=getCatalogProduct('kitchen_cabinets', u.finish);
+  const sinkChoice=getCatalogProduct('kitchen_sink', u.finish);
+  const tapChoice=getCatalogProduct('kitchen_tap', u.finish);
+  if(cabinetChoice) items.push(makeCatalogItem('kitchen_cabinets', u.finish, {product:cabinetChoice, qty:1, unit_labor:480}));
+  items.push(makeBomItem({
+    name:'משטח עבודה + פנלים',
+    cat_ref:'KIT-TOP',
+    supplier:'Deloudis',
+    link:'https://deloudis.gr/',
+    qty:runM,
+    unit:'מ"א',
+    unit_mat:roundMoney(85*finishWeight(u.finish)),
+    unit_labor:42
+  }));
+  if(sinkChoice) items.push(makeCatalogItem('kitchen_sink', u.finish, {product:sinkChoice, qty:1, unit_labor:50}));
+  if(tapChoice) items.push(makeCatalogItem('kitchen_tap', u.finish, {product:tapChoice, qty:1, unit_labor:35}));
+  if(tileChoice){
+    items.push(makeCatalogItem('wall_tiles', u.finish, {
+      product:tileChoice,
+      name:'חיפוי גב מטבח',
+      qty:roundMoney(runM*0.65),
+      unit:'מ"ר',
+      unit_mat:roundMoney(tileChoice.price + 2.2),
+      unit_labor:12
+    }));
+  }
+  return makeCategory('מטבח','🍳',items);
+}
+function acCategory(u){
+  const acChoice=getCatalogProduct('ac', u.finish);
+  if(!acChoice) return null;
+  const count=Math.max(1,Number(u.elec_ac_points)||1);
+  return makeCategory('מיזוג','❄️',[
+    makeCatalogItem('ac', u.finish, {product:acChoice, qty:count, unit_labor:135}),
+    makeBomItem({
+      name:'צנרת גז, ניקוז וקונסולות',
+      cat_ref:'AC-KIT',
+      supplier:'Praktiker',
+      link:'https://www.praktiker.gr/',
+      qty:count,
+      unit:"יח'",
+      unit_mat:68,
+      unit_labor:18
+    })
+  ]);
+}
+function solarCategory(u){
+  const solarChoice=getCatalogProduct('solar', u.finish);
+  if(!solarChoice) return null;
+  return makeCategory('דוד שמש','☀️',[
+    makeCatalogItem('solar', u.finish, {product:solarChoice, qty:1, unit_labor:120}),
+    makeBomItem({
+      name:'חיזוקים, ברזים וחיבור לגג',
+      cat_ref:'SOLAR-KIT',
+      supplier:'Thermovent',
+      link:'https://www.thermovent.gr/',
+      qty:1,
+      unit:"ערכה",
+      unit_mat:85,
+      unit_labor:45
+    })
+  ]);
+}
+function furnitureCategory(u, bldg){
+  const beds=roomCount(u.rooms)>=2 ? 2 : 1;
+  const grade=requestedGrade('furniture', u.finish);
+  const items=[];
+  const bedChoice=pickNamedFurnitureProduct(grade,/Bed|MALM|BRIMNES|Boxspring/i);
+  const sofaChoice=pickNamedFurnitureProduct(grade,/Sofa|LANDSKRONA|EKTORP/i);
+  const tvChoice=pickNamedFurnitureProduct(grade,/TV|QLED|Smart TV/i);
+  const kitChoice=pickNamedFurnitureProduct(grade,/Starter Kit|מצעים|מגבות/i);
+  const storageChoice=pickNamedFurnitureProduct(grade,/BESTÅ|KALLAX|Shelf/i);
+  if(bedChoice) items.push(makeCatalogItem('furniture', grade, {product:bedChoice, qty:beds, unit_labor:40}));
+  if(sofaChoice && u.size>=24) items.push(makeCatalogItem('furniture', grade, {product:sofaChoice, qty:1, unit_labor:35}));
+  if(tvChoice) items.push(makeCatalogItem('furniture', grade, {product:tvChoice, qty:1, unit_labor:20}));
+  if(kitChoice) items.push(makeCatalogItem('furniture', grade, {product:kitChoice, qty:Math.max(1,beds), unit_labor:0}));
+  if(storageChoice) items.push(makeCatalogItem('furniture', grade, {product:storageChoice, qty:1, unit_labor:25}));
+  if(bldg.purpose==='Airbnb'){
+    items.push(makeBomItem({
+      name:'ערכת אבזור Airbnb',
+      cat_ref:'AIRBNB-SETUP',
+      supplier:'Host supply',
+      qty:occupantCount(u),
+      unit:'אורח',
+      unit_mat:28,
+      unit_labor:0
+    }));
+  }
+  return makeCategory('ריהוט והלבשה','🛋️',items);
+}
+function openingsCategory(u, bldg){
+  const profile=conditionProfile(bldg.condition);
+  const estimatedWindows=Math.max(1,Math.round(u.size/18));
+  const windowQty=clamp(Math.round(estimatedWindows*profile.openings),0,estimatedWindows);
+  const items=[];
+  if(bldg.condition!=='ריק חדש (אחרי 2010)' && bldg.condition!=='גולמי ללא גמר'){
+    const doorChoice=getCatalogProduct('door', u.finish);
+    if(doorChoice) items.push(makeCatalogItem('door', u.finish, {product:doorChoice, qty:1, unit_labor:140}));
+  }
+  if(windowQty>0){
+    const windowChoice=getCatalogProduct('windows', u.finish);
+    if(windowChoice) items.push(makeCatalogItem('windows', u.finish, {product:windowChoice, qty:windowQty, unit_labor:92}));
+  }
+  return makeCategory('פתחים','🚪',items);
+}
+function buildingSharedArea(bldg){
+  return roundMoney(Math.max(bldg.commonSize||0,bldg.lobbySize||0,units.length*6,bldg.floors*8));
+}
+function commonSystemsCategory(bldg){
+  const sharedArea=buildingSharedArea(bldg);
+  const items=[];
+  if(bldg.common.elec){
+    const panel=getCatalogProduct('elec_panel', 'Luxury', p=>/3-Phase|3phase|trifasiko|תלת|μεγάλο/i.test(p.name));
+    const lightChoice=getCatalogProduct('lighting', 'Mid');
+    const commonLights=Math.max(4,Math.ceil(sharedArea/10)+bldg.floors);
+    if(panel) items.push(makeCatalogItem('elec_panel', 'Luxury', {product:panel, name:'לוח חשמל מרכזי לבניין', qty:1, unit_labor:260}));
+    if(lightChoice) items.push(makeCatalogItem('lighting', 'Mid', {product:lightChoice, name:'תאורת שטחים משותפים', qty:(lightChoice.unit==='ערכה' ? Math.max(1,Math.ceil(commonLights/4)) : commonLights), unit:lightChoice.unit, unit_labor:18}));
+    items.push(makeBomItem({
+      name:'חיווט ולוחות משנה לשטחים משותפים',
+      cat_ref:'COMMON-ELEC',
+      supplier:getLeadSupplier('electrical'),
+      link:getLeadSupplierUrl('electrical'),
+      qty:sharedArea,
+      unit:'מ"ר',
+      unit_mat:6.8,
+      unit_labor:11.5
+    }));
+  }
+  if(bldg.common.water){
+    items.push(makeBomItem({
+      name:'קו מים ראשי ועליות אנכיות',
+      cat_ref:'COMMON-PLUMB',
+      supplier:getLeadSupplier('plumbing'),
+      link:getLeadSupplierUrl('plumbing'),
+      qty:Math.max(1,bldg.floors),
+      unit:'קומה',
+      unit_mat:165,
+      unit_labor:120
+    }));
+    items.push(makeBomItem({
+      name:'מגופים, קולטים וניקוז ראשי',
+      cat_ref:'COMMON-VALVES',
+      supplier:'Brass Form',
+      link:'https://www.brassform.gr/',
+      qty:Math.max(2,units.length),
+      unit:"נק'",
+      unit_mat:26,
+      unit_labor:18
+    }));
+  }
+  if(bldg.common.smart){
+    items.push(makeBomItem({
+      name:'אינטרקום + בקרת כניסה',
+      cat_ref:'COMMON-SMART',
+      supplier:getLeadSupplier('electrical'),
+      link:getLeadSupplierUrl('electrical'),
+      qty:1,
+      unit:'מערכת',
+      unit_mat:690,
+      unit_labor:240
+    }));
+  }
+  if(bldg.common.elevator){
+    items.push(makeBomItem({
+      name:'רענון מעלית / פיקוד בסיסי',
+      cat_ref:'COMMON-ELEV',
+      supplier:'ספק מעליות מקומי',
+      qty:1,
+      unit:'מערכת',
+      unit_mat:3200,
+      unit_labor:950
+    }));
+  }
+  return makeCategory('מערכות משותפות','⚙️',items);
+}
+function commonFinishesCategory(bldg){
+  const lobbyArea=bldg.lobbySize || (bldg.common.lobby ? Math.max(12,units.length*6) : 0);
+  const stairsArea=bldg.common.stairs ? Math.max(bldg.commonSize||0,bldg.floors*10) : 0;
+  const finishArea=roundMoney(lobbyArea+stairsArea);
+  if(!finishArea) return null;
+  const floorChoice=getCatalogProduct('flooring', 'Mid');
+  const items=[];
+  if(floorChoice && lobbyArea>0){
+    items.push(makeCatalogItem('flooring', 'Mid', {
+      product:floorChoice,
+      name:'ריצוף לובי',
+      qty:roundMoney(lobbyArea*1.06),
+      unit:'מ"ר',
+      unit_labor:11
+    }));
+  }
+  items.push(makeBomItem({
+    name:'תיקוני טיח וצבע ללובי/מדרגות',
+    cat_ref:'COMMON-PAINT',
+    supplier:'Vechro',
+    link:'https://www.vechro.gr/',
+    qty:roundMoney(finishArea*2.2),
+    unit:'מ"ר',
+    unit_mat:2.1,
+    unit_labor:5.2
+  }));
+  return makeCategory('לובי ומדרגות','🏛️',items);
+}
+function facadeCategory(bldg){
+  const hasFacade=bldg.common.facade || bldg.facadeType!=='none' || bldg.facadeSize>0;
+  if(!hasFacade) return null;
+  const facadeMap={
+    paint_only:'ext_paint_only',
+    plaster_paint:'ext_plaster',
+    thermoprosopi:'ext_thermoprosopi',
+    insulation_rock:'ext_insulation_rock',
+    stone_cladding:'ext_stone',
+    tile_cladding:'ext_tile'
+  };
+  const wallTypeId=facadeMap[bldg.facadeType] || 'ext_paint_only';
+  const wt=WALL_TYPES.find(t=>t.id===wallTypeId);
+  if(!wt) return null;
+  const area=bldg.facadeSize || roundMoney(Math.max(80,bldg.size*1.8));
+  return makeCategory('חזית ומעטפת','🏢',[
+    makeBomItem({
+      name:wt.label,
+      cat_ref:wt.id,
+      supplier:wt.supplier,
+      link:wt.link,
+      qty:area,
+      unit:wt.unit,
+      unit_mat:wt.mat_price,
+      unit_labor:wt.labor_price
+    })
+  ]);
+}
+function roofCategory(bldg){
+  if(!bldg.common.roof) return null;
+  const roofArea=bldg.roofSize || roundMoney(Math.max(40,bldg.size/Math.max(1,bldg.floors)));
+  return makeCategory('גג ואיטום','🏛️',[
+    makeBomItem({
+      name:'איטום גג',
+      cat_ref:'ROOF-WATERPROOF',
+      supplier:'Isomat',
+      link:'https://www.isomat.gr/',
+      qty:roofArea,
+      unit:'מ"ר',
+      unit_mat:12.5,
+      unit_labor:10.5
+    }),
+    makeBomItem({
+      name:'שיפועים ותיקוני בטון מקומיים',
+      cat_ref:'ROOF-SCREED',
+      supplier:'Marmoline',
+      link:'https://marmoline.gr/',
+      qty:roofArea,
+      unit:'מ"ר',
+      unit_mat:4.2,
+      unit_labor:5.8
+    })
+  ]);
+}
+function exteriorSiteCategory(bldg){
+  const items=[];
+  if(bldg.common.parking){
+    items.push(makeBomItem({
+      name:'צביעת חניה וסימון מקומות',
+      cat_ref:'SITE-PARK',
+      supplier:'Leroy Merlin',
+      link:'https://www.leroymerlin.gr/',
+      qty:1,
+      unit:'אזור',
+      unit_mat:480,
+      unit_labor:320
+    }));
+  }
+  if(bldg.common.garden){
+    items.push(makeBomItem({
+      name:'גינון, גדר ותאורת חוץ',
+      cat_ref:'SITE-GARDEN',
+      supplier:'Leroy Merlin',
+      link:'https://www.leroymerlin.gr/',
+      qty:1,
+      unit:'אזור',
+      unit_mat:820,
+      unit_labor:340
+    }));
+  }
+  return makeCategory('חוץ ופיתוח','🌿',items);
+}
+function buildUnitBomFromData(u, bldg){
+  const categories=[finishCategory(u,bldg)];
+  if(u.floor_) categories.push(flooringCategory(u,bldg));
+  if(u.elec) categories.push(electricalCategory(u,bldg));
+  if(u.plumb) categories.push(plumbingCategory(u,bldg));
+  if(u.bath) categories.push(bathroomCategory(u,bldg));
+  if(u.kitchen) categories.push(kitchenCategory(u));
+  if(u.ac) categories.push(acCategory(u));
+  if(u.solar) categories.push(solarCategory(u));
+  if(u.furn) categories.push(furnitureCategory(u,bldg));
+  categories.push(openingsCategory(u,bldg));
+  categories.push(makeCategory('קירות ומחיצות','🧱',wallBuildItems(u.id)));
+  return makeUnitBom(u.name,u.floor,u.size,u.finish,categories);
+}
+function buildCommonAreasBom(bldg){
+  const categories=[
+    commonSystemsCategory(bldg),
+    commonFinishesCategory(bldg),
+    facadeCategory(bldg),
+    roofCategory(bldg),
+    exteriorSiteCategory(bldg),
+    makeCategory('קירות בניין','🧱',wallBuildItems('bldg'))
+  ].filter(Boolean);
+  return {
+    subtotal_mat:sumBy(categories,'subtotal_mat'),
+    subtotal_labor:sumBy(categories,'subtotal_labor'),
+    subtotal:sumBy(categories,'subtotal'),
+    categories
+  };
+}
+function buildDemolitionBom(bldg){
+  const profile=conditionProfile(bldg.condition);
+  const floorRemovalShare=bldg.condition==='גולמי ללא גמר' ? 0 : (bldg.condition==='ריק חדש (אחרי 2010)' ? 0.35 : 1);
+  const floorRemovalArea=roundMoney(units.filter(u=>u.floor_).reduce((sum,u)=>sum+(u.size*floorRemovalShare),0));
+  const bathroomDemoCount=units.filter(u=>u.bath).reduce((sum,u)=>sum+bathroomCount(u),0);
+  const kitchenDemoCount=units.filter(u=>u.kitchen).length;
+  const items=[];
+  if(floorRemovalArea>0){
+    items.push(makeBomItem({
+      name:'פירוק ריצוף קיים',
+      cat_ref:'DEMO-FLOOR',
+      supplier:'קבלן הריסה',
+      qty:floorRemovalArea,
+      unit:'מ"ר',
+      unit_mat:0,
+      unit_labor:roundMoney(6.2*profile.demo)
+    }));
+  }
+  if(bathroomDemoCount>0 && bldg.condition!=='גולמי ללא גמר'){
+    items.push(makeBomItem({
+      name:'פירוק חדרי רחצה',
+      cat_ref:'DEMO-BATH',
+      supplier:'קבלן הריסה',
+      qty:bathroomDemoCount,
+      unit:'חדר',
+      unit_mat:0,
+      unit_labor:roundMoney(420*profile.demo)
+    }));
+  }
+  if(kitchenDemoCount>0 && bldg.condition!=='גולמי ללא גמר'){
+    items.push(makeBomItem({
+      name:'פירוק מטבחים קיימים',
+      cat_ref:'DEMO-KITCHEN',
+      supplier:'קבלן הריסה',
+      qty:kitchenDemoCount,
+      unit:'מטבח',
+      unit_mat:0,
+      unit_labor:roundMoney(260*profile.demo)
+    }));
+  }
+  units.forEach(u=>items.push(...wallDemolitionItems(u.id, `${u.name} · `)));
+  items.push(...wallDemolitionItems('bldg', 'בניין · '));
+  const debrisBase=floorRemovalArea + (bathroomDemoCount*12) + (kitchenDemoCount*8) + items.filter(it=>it.cat_ref==='demolish').reduce((sum,it)=>sum+(Number(it.qty)||0),0);
+  const debrisLoads=debrisBase>0 ? Math.max(1,Math.ceil(debrisBase/45)) : 0;
+  if(debrisLoads){
+    items.push(makeBomItem({
+      name:'פינוי פסולת ומכולות',
+      cat_ref:'DEMO-DEBRIS',
+      supplier:'קבלן פינוי',
+      qty:debrisLoads,
+      unit:'מכולה',
+      unit_mat:0,
+      unit_labor:300
+    }));
+  }
+  const subtotal=sumBy(items,'total');
+  return {subtotal_mat:0,subtotal_labor:subtotal,subtotal,items};
+}
+function buildTimeline(bldg, demolition){
+  const totalArea=units.reduce((sum,u)=>sum+(Number(u.size)||0),0) + (bldg.commonSize||0) + (bldg.lobbySize||0);
+  const bathroomTotal=units.reduce((sum,u)=>sum+(u.bath ? bathroomCount(u) : 0),0);
+  const kitchenTotal=units.filter(u=>u.kitchen).length;
+  const wallArea=Object.keys(walls).reduce((sum,scope)=>sum + (walls[scope]||[]).reduce((acc,w)=>acc+(Number(w.sqm)||0),0),0);
+  const planningWeeks=(totalArea>120 || units.length>2 || bldg.common.facade) ? 2 : 1;
+  const demolitionWeeks=demolition.subtotal>0 ? clamp(Math.ceil((demolition.items?.length||0)/2),1,3) : 0;
+  const shellWeeks=wallArea>0 ? Math.max(1,Math.ceil(wallArea/25)) : 0;
+  const mepWeeks=Math.max(1,Math.ceil((units.filter(u=>u.elec||u.plumb).length + bathroomTotal + kitchenTotal)/2));
+  const finishWeeks=Math.max(1,Math.ceil(totalArea/55)) + Math.max(0,bathroomTotal-1);
+  const installWeeks=Math.max(1,Math.ceil((units.filter(u=>u.ac).length + kitchenTotal + units.filter(u=>u.furn).length)/2));
+  const phases=[
+    {name:'תכנון ותיאום',weeks:planningWeeks,description:'מדידות, ספקים והזמנות'},
+    ...(demolitionWeeks ? [{name:'הריסה ופינוי',weeks:demolitionWeeks,description:'פירוקים, מכולות ופינוי'}] : []),
+    ...(shellWeeks ? [{name:'בנייה ומחיצות',weeks:shellWeeks,description:'קירות, טיח ותיקוני מעטפת'}] : []),
+    {name:'תשתיות MEP',weeks:mepWeeks,description:'חשמל, אינסטלציה ומיזוג'},
+    {name:'גמרים והלבשה',weeks:finishWeeks,description:'ריצוף, צבע, חיפויים ודלתות'},
+    {name:'התקנות ומסירה',weeks:installWeeks+1,description:'מטבחים, סניטריה, ריהוט ובדיקות'}
+  ];
+  return {total_weeks:phases.reduce((sum,phase)=>sum+phase.weeks,0),phases};
+}
+function buildProfessionals(bldg, timeline, demolition, commonAreas){
+  const wallWorkSqm=Object.keys(walls).reduce((sum,scope)=>sum + (walls[scope]||[]).reduce((acc,w)=>acc+(Number(w.sqm)||0),0),0);
+  const structuralNeed=wallWorkSqm>=8 || bldg.common.facade || bldg.common.roof || bldg.common.elevator || bldg.floors>3;
+  const architect=roundMoney(clamp(700 + (bldg.size*2.8) + (units.length*120) + (commonAreas.subtotal>0 ? 150 : 0),800,2600));
+  const structuralEngineer=structuralNeed ? roundMoney(clamp(850 + (bldg.floors*110) + (wallWorkSqm*6),900,2200)) : 0;
+  const supervisorMonths=Math.max(1,Math.ceil((timeline.total_weeks||4)/4));
+  const supervisorMonthly=roundMoney(clamp(550 + (units.length*110) + (bldg.size*1.1) + (demolition.subtotal>2500 ? 150 : 0),650,1800));
+  const supervisorTotal=roundMoney(supervisorMonthly*supervisorMonths);
+  return {
+    architect,
+    structural_engineer:structuralEngineer,
+    supervisor_monthly:supervisorMonthly,
+    supervisor_months:supervisorMonths,
+    supervisor_total:supervisorTotal,
+    total:roundMoney(architect + structuralEngineer + supervisorTotal)
+  };
+}
+async function generateBOM(options={}){
+  const opts={silent:false,refreshPrices:true,notifyOnDone:true,...options};
+  if(!opts.silent) document.getElementById('loading').classList.add('show');
   document.getElementById('genBtn').disabled=true;
-
   const bldg={
     type:tg('tg-type'), size:numVal('totalSize',200), floors:numVal('floors',3),
     year:numVal('buildYear',1985), condition:document.getElementById('condition').value,
@@ -1392,176 +2361,71 @@ async function generateBOM(){
     facadeSize:numVal('facadeSize',0),
     facadeType:document.getElementById('facadeType').value,
   };
-
-  const wallsCtx=(scope)=>{
-    const ws=walls[scope]||[]; if(!ws.length) return '';
-    return ws.map(w=>{const wt=WALL_TYPES.find(x=>x.id===w.type)||WALL_TYPES[0];
-      return `${wt.label} ${w.sqm}sqm mat:${wt.mat_price}EUR/sqm labor:${wt.labor_price}EUR/sqm`;}).join('; ');
-  };
-
-  const prodCtx=Object.entries(selProds).map(([k,s])=>{
-    const cat=CAT[k]; if(!cat) return '';
-    if(s.mode==='specific'&&s.pid){
-      const p=cat.products.find(x=>x.id===s.pid);
-      if(p) return `${cat.label}: USE EXACT: ${p.name}, cat:${p.cat}, supplier:${p.supplier}, mat:${p.price}EUR/${p.unit}, link:${p.link}`;
-    }
-    return `${cat.label}: grade=${s.grade}`;
-  }).filter(Boolean).join('\n');
-
-  const unitBatches = [];
-  for(let i=0; i<units.length; i+=2) unitBatches.push(units.slice(i,i+2));
-
-  try {
-    const batchPromises = unitBatches.map((batch) => {
-      const uCtx = batch.map(u=>{
-        const expectedTotal = u.size * (u.finish==='Basic'?400:u.finish==='Luxury'?900:650);
-        const elecCost = u.elec ? Math.round(
-          (u.elec_3phase ? 550 : 120) +
-          (u.elec_sockets||4) * (u.elec_brand?.includes('Gira')||u.elec_brand?.includes('Jung')?22:u.elec_brand?.includes('Bticino')||u.elec_brand?.includes('Vimar')?18:u.elec_brand?.includes('Aliberti')?4:u.elec_brand?.includes('Celiane')?14:9) +
-          (u.elec_switches||6) * (u.elec_brand?.includes('Gira')||u.elec_brand?.includes('Jung')?22:u.elec_brand?.includes('Bticino')||u.elec_brand?.includes('Vimar')?18:u.elec_brand?.includes('Aliberti')?4:u.elec_brand?.includes('Celiane')?14:9) +
-          (u.elec_lights||8) * 28 +
-          (u.elec_ac_points||1) * 130 +
-          u.size * 40
-        ) : 0;
-        return `Unit "${u.name}" floor:${u.floor} ${u.size}sqm ${u.rooms}br finish:${u.finish}
-includes:[${[u.elec&&'electrical',u.plumb&&'plumbing',u.ac&&'AC',u.furn&&'furniture',u.kitchen&&'kitchen',u.bath&&'bathroom',u.floor_&&'flooring',u.solar&&'solar'].filter(Boolean).join(',')}]
-${u.elec?`ELECTRICAL DETAILS: brand="${u.elec_brand}" phase=${u.elec_3phase?'3-phase':'1-phase'} sockets:${u.elec_sockets} switches:${u.elec_switches} lighting_points:${u.elec_lights} AC_points:${u.elec_ac_points} estimated_elec_cost:${elecCost}EUR`:''}
-walls:[${wallsCtx(u.id)}]
-EXPECTED TOTAL RANGE: ${Math.round(expectedTotal*0.7)}-${Math.round(expectedTotal*1.3)}€`;
-      }).join('\n\n');
-
-      const p = `You are pricing a complete Athens apartment renovation 2025. Be REALISTIC and DETAILED.
-PRICE BENCHMARKS per sqm (Athens 2025):
-- Flooring porcelain: mat 8-22€/sqm + labor 10-14€/sqm
-- Electrical full rewire: 35-55€/sqm (materials+labor combined)
-- 3-phase panel: mat 350-500€ + labor 200€ install
-- Plumbing full: 25-40€/sqm (materials+labor)
-- Bathroom tiling complete: 600€ flat per bathroom
-- WC tiling complete: 400€ flat per WC
-- AC split unit supply+install: 600-1100€ per unit
-- Kitchen cabinets set: 600-3500€ depending on grade
-- Interior doors: mat 150-400€ + labor 80€ each
-- Plastering+painting all walls: 12-20€/sqm
-- Solar water heater: mat 350-800€ + labor 120€
-BUILDING: ${bldg.type} year:${bldg.year} condition:${bldg.condition} purpose:${bldg.purpose}
-PRODUCT GRADES CHOSEN:
-${prodCtx}
-UNITS TO PRICE:
-${uCtx}
-Return ONLY a JSON array. Each unit must have realistic totals.
-Structure: [{"name":"","floor":1,"size_sqm":0,"finish":"","subtotal_mat":0,"subtotal_labor":0,"subtotal":0,"categories":[{"name":"","emoji":"","subtotal_mat":0,"subtotal_labor":0,"subtotal":0,"items":[{"name":"","cat_ref":"","supplier":"","link":"","qty":1,"unit":"","unit_mat":0,"unit_labor":0,"total_mat":0,"total_labor":0,"total":0}]}]}]
-Rules: 3-5 items per category, flooring qty=sqm*1.1, ALL numbers must be realistic EUR amounts, subtotals must equal sum of items.`;
-      return callAPI(p, '[');
-    });
-
-    const commonPromise = callAPI(`Athens renovation: building ${bldg.type} ${bldg.size}sqm ${bldg.floors}floors year:${bldg.year} purpose:${bldg.purpose}
-Common areas: lobby:${bldg.lobbySize}sqm roof:${bldg.roofSize}sqm facade:${on('c-facade')} stairs:${on('c-stairs')} smart_entry:${on('c-smart')} elevator:${on('c-elevator')}
-EXTERIOR FACADE: ${bldg.facadeSize>0?`${bldg.facadeSize}sqm treatment:${bldg.facadeType}`:'none'}
-Exterior wall rates: paint_only mat:4€/sqm labor:8€/sqm | plaster_paint mat:12€/sqm labor:15€/sqm | thermoprosopi(EPS10cm) mat:28€/sqm labor:18€/sqm | insulation_rock mat:35€/sqm labor:20€/sqm | stone_cladding mat:55€/sqm labor:35€/sqm | tile_cladding mat:30€/sqm labor:25€/sqm
-Walls: ${wallsCtx('bldg')}
-Units count: ${units.length} total size:${bldg.size}sqm
-Return JSON object: {"common_areas":{"subtotal_mat":0,"subtotal_labor":0,"subtotal":0,"categories":[]},"professionals":{"architect":0,"structural_engineer":0,"supervisor_monthly":0,"supervisor_months":0,"supervisor_total":0,"total":0},"demolition":{"subtotal_mat":0,"subtotal_labor":0,"subtotal":0,"items":[{"name":"","qty":0,"unit":"","unit_labor":0,"total":0}]},"timeline":{"total_weeks":0,"phases":[{"name":"","weeks":0,"description":""}]},"notes":""}. ONLY JSON.`, '{');
-
-    const [allBatchResults, commonTxt] = await Promise.all([Promise.all(batchPromises), commonPromise]);
-
-    const allUnits = [];
-    for(let i=0; i<allBatchResults.length; i++) {
-      const batchTxt = allBatchResults[i];
-      try {
-        const arr = parseJSON(batchTxt);
-        if(Array.isArray(arr)) allUnits.push(...arr);
-        else if(arr && typeof arr === 'object' && arr.name) allUnits.push(arr);
-      } catch(e) {
-        console.warn('Batch',i,'parse failed, retrying...', e.message);
-        try {
-          const retryTxt = await callAPI(unitBatches[i].map((u)=>`Unit "${u.name}" floor:${u.floor} ${u.size}sqm ${u.rooms}br finish:${u.finish}`).join('\n')+'\nReturn JSON array of unit objects. ONLY JSON array, no explanation.', '');
-          const arr2 = parseJSON(retryTxt);
-          if(Array.isArray(arr2)) allUnits.push(...arr2);
-        } catch(e2) { console.error('Retry also failed:', e2.message); }
-      }
-    }
-
-    const commonData = parseJSON(commonTxt);
-
-    const totalMat = allUnits.reduce((s,u)=>s+(u.subtotal_mat||0),0) + (commonData.common_areas?.subtotal_mat||0);
-    const totalLab = allUnits.reduce((s,u)=>s+(u.subtotal_labor||0),0) + (commonData.common_areas?.subtotal_labor||0);
-    const profTotal = commonData.professionals?.total||0;
-    const demoTotal = commonData.demolition?.subtotal||0;
-
-    const bom = {
-      summary:{ total_mat: totalMat, total_labor: totalLab, total_demolition: demoTotal, total_professionals: profTotal, total: totalMat+totalLab+profTotal+demoTotal, units_count: allUnits.length, currency:'EUR' },
-      units: allUnits,
-      common_areas: commonData.common_areas||{},
-      demolition: commonData.demolition||{},
-      professionals: commonData.professionals||{},
-      timeline: commonData.timeline||{}
+  try{
+    const unitBoms=units.map(u=>buildUnitBomFromData(u,bldg));
+    const commonAreas=buildCommonAreasBom(bldg);
+    const demolition=buildDemolitionBom(bldg);
+    const timeline=buildTimeline(bldg,demolition);
+    const professionals=buildProfessionals(bldg,timeline,demolition,commonAreas);
+    const totalMat=sumBy(unitBoms,'subtotal_mat') + (commonAreas.subtotal_mat||0);
+    const totalLabor=sumBy(unitBoms,'subtotal_labor') + (commonAreas.subtotal_labor||0);
+    let bom={
+      summary:{
+        total_mat:totalMat,
+        total_labor:totalLabor,
+        total_demolition:demolition.subtotal||0,
+        total_professionals:professionals.total||0,
+        total:roundMoney(totalMat + totalLabor + (demolition.subtotal||0) + (professionals.total||0)),
+        units_count:unitBoms.length,
+        currency:'EUR'
+      },
+      units:unitBoms,
+      common_areas:commonAreas,
+      demolition,
+      professionals,
+      timeline
     };
-
-    currentBOM=bom; renderBOM(bom);
-    document.getElementById('expBtn').disabled=false;
-    notify('✅ BOM מוכן!');
-
-    const s=bom.summary;
-    const tl=bom.timeline||{};
-    document.getElementById('s6sum').innerHTML=`
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-top:12px;">
-        <div class="bom-kpi"><div class="bom-kpi-l">חומרים</div><div class="bom-kpi-v">${fmt(s.total_mat)}</div></div>
-        <div class="bom-kpi"><div class="bom-kpi-l">עבודה</div><div class="bom-kpi-v">${fmt(s.total_labor)}</div></div>
-        <div class="bom-kpi"><div class="bom-kpi-l">הריסות</div><div class="bom-kpi-v">${fmt(s.total_demolition)}</div></div>
-        <div class="bom-kpi"><div class="bom-kpi-l">אנשי מקצוע</div><div class="bom-kpi-v">${fmt(s.total_professionals)}</div></div>
-        <div class="bom-kpi wide" style="background:var(--gold-dim);border-color:rgba(232,184,75,0.4);">
-          <div class="bom-kpi-l">סה"כ פרויקט</div>
-          <div class="bom-kpi-v" style="font-size:20px;">${fmt(s.total)}</div>
-        </div>
-      </div>
-      ${tl.total_weeks?`<div style="margin-top:10px;background:var(--s2);border:1px solid var(--border);border-radius:8px;padding:10px;">
-        <div style="font-size:10px;font-weight:800;color:var(--t3);text-transform:uppercase;letter-spacing:0.7px;margin-bottom:6px;">⏱️ לוח זמנים — ${Number(tl.total_weeks)||0} שבועות</div>
-        ${(tl.phases||[]).map(ph=>`<div style="display:flex;justify-content:space-between;font-size:11px;padding:3px 0;border-bottom:1px solid var(--border);">
-          <span style="color:var(--t2);">${esc(ph.name)}</span>
-          <span style="color:var(--gold);font-weight:700;">${Number(ph.weeks)||0} שבועות</span>
-        </div>`).join('')}
-      </div>`:''}
-      ${bom.professionals?.architect?`<div style="margin-top:8px;background:var(--s2);border:1px solid var(--border);border-radius:8px;padding:10px;">
-        <div style="font-size:10px;font-weight:800;color:var(--t3);text-transform:uppercase;letter-spacing:0.7px;margin-bottom:6px;">👷 אנשי מקצוע</div>
-        <div style="font-size:11px;color:var(--t2);">אדריכל: <span style="color:var(--text)">${fmt(bom.professionals.architect)}</span></div>
-        <div style="font-size:11px;color:var(--t2);">מהנדס קונסטרוקציה: <span style="color:var(--text)">${fmt(bom.professionals.structural_engineer)}</span></div>
-        <div style="font-size:11px;color:var(--t2);">מפקח בנייה (${Number(bom.professionals.supervisor_months)||0} חודשים): <span style="color:var(--text)">${fmt(bom.professionals.supervisor_total)}</span></div>
-      </div>`:''}`;
-
+    applyBomToUi(bom);
+    if(opts.refreshPrices){
+      bom=await refreshBomPrices(currentBOM);
+      applyBomToUi(bom);
+    }else{
+      lastPriceRefreshState.checked_at=lastPriceRefreshState.checked_at || nowIso();
+    }
+    if(opts.notifyOnDone && !opts.silent) notify('✅ BOM מוכן!');
   }catch(e){
     console.error(e);
-    notify('❌ '+e.message);
+    if(!opts.silent) notify('❌ '+e.message);
     document.getElementById('s6sum').innerHTML=`
       <div class="err" style="display:block;margin-top:12px;">❌ שגיאה: ${esc(e.message)}
         <br><br><button onclick="generateBOM()" style="background:var(--red-dim);border:1px solid rgba(240,69,69,0.4);color:var(--red);padding:7px 14px;border-radius:7px;cursor:pointer;font-family:Heebo,sans-serif;font-size:12px;">🔄 נסה שוב</button>
       </div>`;
   }finally{
-    document.getElementById('loading').classList.remove('show');
+    if(!opts.silent) document.getElementById('loading').classList.remove('show');
     document.getElementById('genBtn').disabled=(currentStep<6);
   }
 }
-
 function renderBOM(bom){
   const s=bom.summary;
   document.getElementById('bomKpis').style.display='grid';
   document.getElementById('kM').textContent=fmt(s.total_mat);
   document.getElementById('kL').textContent=fmt(s.total_labor);
   document.getElementById('kT').textContent=fmt(s.total);
-  document.getElementById('bomSub').textContent=`${s.units_count} יחידות · ${s.currency}`;
+  document.getElementById('bomSub').textContent=`${s.units_count} יחידות · ${s.currency} · ${lastPriceRefreshState.mode}`;
   const scroll=document.getElementById('bomScroll'); scroll.innerHTML='';
-
   const mkItem = (it) => `<div class="bom-line" id="item-${makeIdFragment(it.name)}">
     <div class="bom-line-name">${esc(it.name)}<small>${esc(it.supplier||'')} ${it.cat_ref?'· '+esc(it.cat_ref):''} · ×${Number(it.qty)||0} ${esc(it.unit||'')} ${it.link&&safeUrl(it.link)!=='#'?'<a href="'+safeUrl(it.link)+'" target="_blank" rel="noopener noreferrer" style="color:var(--blue)">🔗</a>':''}</small>
+    <small>קטגוריה: ${esc(it.category||'—')} · חומר/יח': ${fmt(it.unit_mat)} · עבודה/יח': ${fmt(it.unit_labor)}</small>
+    <small>מקור מחיר: ${esc(it.price_source||'default')} · נבדק: ${esc(fmtChecked(it.last_checked))}${it.note?` · ${esc(it.note)}`:''}</small>
     ${it.actual_price?`<small style="color:var(--green);">✅ בפועל: ${fmt(it.actual_price)} ${it.discount_pct?'(הנחה '+Number(it.discount_pct)+'%)':''}</small>`:''}
     </div>
     <div class="bom-line-prices">
       <span class="p-mat">🔩 ${fmt(it.total_mat)}</span>
       <span class="p-lab">👷 ${fmt(it.total_labor)}</span>
       <span class="p-tot">${fmt(it.total)}</span>
-      <button onclick="editItem(this)" data-item="${escAttr(encodeDataAttr({name:it.name,total:it.total,qty:it.qty,unit:it.unit||''}))}" style="background:none;border:none;color:var(--t3);cursor:pointer;font-size:9px;padding:1px 3px;" title="עדכן הזמנה בפועל + הנחה">✏️</button>
+      <button onclick="editItem(this)" data-item="${escAttr(encodeDataAttr({bom_ref:it.bom_ref,name:it.name,total:it.total,qty:it.qty,unit:it.unit||'',price_source:it.price_source}))}" style="background:none;border:none;color:var(--t3);cursor:pointer;font-size:9px;padding:1px 3px;" title="עדכן הזמנה בפועל + הנחה">✏️</button>
     </div>
   </div>`;
-
   const mkUnit=(u)=>{
     const div=document.createElement('div'); div.className='bom-unit';
     div.innerHTML=`
@@ -1581,21 +2445,16 @@ function renderBOM(bom){
       </div>`;
     return div;
   };
-
   const all=[...(bom.units||[])];
   if(bom.common_areas?.subtotal>0) all.push({...bom.common_areas,name:'שטחים משותפים',isCommon:true});
   all.forEach(u=>scroll.appendChild(mkUnit(u)));
-
   if(bom.demolition?.items?.length){
     const d=document.createElement('div'); d.className='bom-unit';
     d.innerHTML=`<div class="bom-unit-head" onclick="this.nextElementSibling.classList.toggle('open')">
       <div class="bom-unit-name">💥 הריסות ופינוי</div><div class="bom-unit-total">${fmt(bom.demolition.subtotal)}</div></div>
-      <div class="bom-unit-body">${(bom.demolition.items||[]).map(it=>`<div class="bom-line">
-        <div class="bom-line-name">${esc(it.name)}<small>×${Number(it.qty)||0} ${esc(it.unit||'')}</small></div>
-        <div class="bom-line-prices"><span class="p-lab">👷 ${fmt(it.total)}</span></div></div>`).join('')}</div>`;
+      <div class="bom-unit-body">${(bom.demolition.items||[]).map(it=>mkItem(it)).join('')}</div>`;
     scroll.appendChild(d);
   }
-
   const pr=bom.professionals;
   if(pr?.total>0){
     const pd=document.createElement('div'); pd.className='bom-unit';
@@ -1608,7 +2467,6 @@ function renderBOM(bom){
       </div>`;
     scroll.appendChild(pd);
   }
-
   const tl=bom.timeline;
   if(tl?.phases?.length){
     const td=document.createElement('div'); td.className='bom-unit';
@@ -1619,10 +2477,8 @@ function renderBOM(bom){
         <div class="bom-line-prices"><span class="p-tot" style="color:var(--gold);">${Number(ph.weeks)||0} שבועות</span></div></div>`).join('')}</div>`;
     scroll.appendChild(td);
   }
-
   scroll.querySelector('.bom-unit-body')?.classList.add('open');
 }
-
 function editItem(btn) {
   let data; try{ data=decodeDataAttr(btn.dataset.item); }catch(e){ return; }
   const html=`<div style="position:fixed;inset:0;background:rgba(8,11,15,0.9);z-index:700;display:flex;align-items:center;justify-content:center;" id="editOverlay">
@@ -1646,26 +2502,54 @@ function editItem(btn) {
   document.body.insertAdjacentHTML('beforeend',html);
   document.querySelector('#editOverlay button[onclick="saveEditItem(this)"]')._origBtn = btn;
 }
-
+function findBomLineByRef(bomRef){
+  if(!currentBOM || !bomRef) return null;
+  const searchItems=(items)=>items?.find(item=>item.bom_ref===bomRef) || null;
+  for(const unit of currentBOM.units||[]){
+    for(const cat of unit.categories||[]){
+      const found=searchItems(cat.items);
+      if(found) return found;
+    }
+  }
+  for(const cat of currentBOM.common_areas?.categories||[]){
+    const found=searchItems(cat.items);
+    if(found) return found;
+  }
+  return searchItems(currentBOM.demolition?.items||[]);
+}
 function saveEditItem(saveBtn) {
   const price = parseFloat(document.getElementById('ei_price').value)||0;
   const disc = parseFloat(document.getElementById('ei_disc').value)||0;
   const link = document.getElementById('ei_link').value.trim();
   const origBtn = saveBtn._origBtn;
   if(!origBtn){ document.getElementById('editOverlay').remove(); return; }
-  const line = origBtn.closest('.bom-line');
-  if(!line){ document.getElementById('editOverlay').remove(); return; }
+  let refData; try{ refData=decodeDataAttr(origBtn.dataset.item); }catch{ refData=null; }
+  const bomLine = findBomLineByRef(refData?.bom_ref);
+  if(!bomLine){ document.getElementById('editOverlay').remove(); return; }
   const finalPrice = price>0 ? price*(1-disc/100) : 0;
-  let actualHtml = '';
   const safeLink=safeUrl(link);
-  if(price>0) actualHtml=`<small style="color:var(--green);">✅ בפועל: ${fmt(finalPrice)}${disc>0?' (הנחה '+disc+'%)':''}${safeLink!=='#'?' <a href="'+safeLink+'" target="_blank" rel="noopener noreferrer" style="color:var(--blue)">🔗 הזמנה</a>':''}</small>`;
-  const nameDiv = line.querySelector('.bom-line-name');
-  nameDiv.querySelectorAll('small[style*="green"]').forEach(s=>s.remove());
-  if(actualHtml) nameDiv.insertAdjacentHTML('beforeend',actualHtml);
+  if(price>0){
+    bomLine.actual_price=roundMoney(finalPrice);
+    bomLine.discount_pct=disc;
+    bomLine.unit_mat=roundMoney(finalPrice/Math.max(1,Number(bomLine.qty)||1));
+    bomLine.total_mat=roundMoney(finalPrice);
+    bomLine.total=roundMoney((Number(bomLine.total_labor)||0)+bomLine.total_mat);
+    bomLine.link=safeLink!=='#' ? safeLink : bomLine.link;
+    bomLine.price_source='manual';
+    bomLine.last_checked=nowIso();
+    bomLine.note=`מחיר ידני${disc>0 ? ` · הנחת ${disc}%` : ''}`;
+    if(bomLine.price_key) setCachedPriceEntry(bomLine.price_key,{
+      price:bomLine.unit_mat,
+      last_checked:bomLine.last_checked,
+      note:'מחיר ידני',
+      price_source:'manual'
+    });
+    lastPriceRefreshState={mode:'manual',checked_at:bomLine.last_checked,note:`עודכן ידנית עבור ${bomLine.name}`};
+  }
+  applyBomToUi(currentBOM);
   document.getElementById('editOverlay').remove();
   notify('✅ עודכן!');
 }
-
 function openModal(){
   if(!currentBOM) return;
   document.getElementById('expTa').value=`בנה לי קובץ Excel מקצועי מה-BOM הבא. כלול גיליון לכל יחידה + גיליון סיכום + dashboard KPIs. כל פריט: שם, קטלוג, ספק, לינק, כמות, יחידה, מחיר חומר, מחיר עבודה, סה"כ.\n\n`+JSON.stringify(currentBOM,null,2);
