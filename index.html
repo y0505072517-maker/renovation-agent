@@ -541,15 +541,7 @@ function formatTextHtml(text){return esc(text).replace(/\n/g,'<br>');}
 function makeIdFragment(value){return String(value??'').replace(/[^a-zA-Z0-9_-]+/g,'_').slice(0,32)||'item';}
 function getApiKey(){return sessionApiKey.trim();}
 function ensureApiKey(){
-  const existing=getApiKey();
-  if(existing) return existing;
-  const entered=window.prompt('כדי להשתמש בפיצ\'רי AI הכנס/י Anthropic API key משלך. המפתח נשמר רק בזיכרון עד רענון העמוד.');
-  if(!entered||!entered.trim()){
-    notify('⚠️ פיצ\'רי AI דורשים Anthropic API key משלך');
-    return '';
-  }
-  sessionApiKey=entered.trim();
-  return sessionApiKey;
+  return 'server';
 }
 
 const SUPPLIERS = {
@@ -1319,9 +1311,9 @@ async function analyzeImages(scope){
   ];
 
   try{
-    const r=await fetch('https://api.anthropic.com/v1/messages',{
+    const r=await fetch('/api/anthropic',{
       method:'POST',
-      headers:{'Content-Type':'application/json','x-api-key':apiKey,'anthropic-version':'2023-06-01','anthropic-dangerous-direct-browser-access':'true'},
+      headers:{'Content-Type':'application/json'},
       body:JSON.stringify({model:'claude-sonnet-4-20250514',max_tokens:800,messages:[{role:'user',content}]})
     });
     const data=await r.json();
@@ -1346,9 +1338,9 @@ Return ONLY valid compact JSON. No explanation. No markdown.`;
   const msgs = [{role:'user', content:prompt}];
   if(prefill) msgs.push({role:'assistant', content:prefill});
 
-  const r = await fetch('https://api.anthropic.com/v1/messages',{
+  const r = await fetch('/api/anthropic',{
     method:'POST',
-    headers:{'Content-Type':'application/json','x-api-key':apiKey,'anthropic-version':'2023-06-01','anthropic-dangerous-direct-browser-access':'true'},
+    headers:{'Content-Type':'application/json'},
     body:JSON.stringify({model:'claude-sonnet-4-20250514', max_tokens:5000, system:SYS, messages:msgs})
   });
   if(!r.ok){ const e=await r.json(); throw new Error(e.error?.message||'HTTP '+r.status); }
