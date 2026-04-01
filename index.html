@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>סוכן שיפוצים PRO v7 — Athens</title>
-<!-- build:1774985277674 -->
-<!-- build: 1774722719 -->
+<!-- build:1775023507321 -->
+<!-- build2:1775023507322 -->
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800;900&family=Noto+Serif+Hebrew:wght@400;700;900&display=swap');
 :root{
@@ -213,9 +213,9 @@ body{font-family:'Heebo',sans-serif;background:var(--bg);color:var(--text);direc
 <body>
 <div class="topbar">
   <div class="logo-mark">🏗</div>
-  <div><div class="logo-text">סוכן שיפוצים PRO · Athens</div><div class="logo-sub">v7 · קטלוג מלא · קירות · תמונות AI · 135 ספקים</div></div>
+  <div><div class="logo-text">סוכן שיפוצים PRO · Athens</div><div class="logo-sub">v9 · LPI מחקרי · קומות · הריסה · BOM עמוק · 135 ספקים</div></div>
   <div class="topbar-right">
-    <div class="v-badge">v7.0</div>
+    <div class="v-badge">v9.0</div>
     <span style="font-size:11px;color:var(--green);font-weight:600;"><span class="live-dot"></span>AI פעיל</span>
   </div>
 </div>
@@ -488,6 +488,11 @@ body{font-family:'Heebo',sans-serif;background:var(--bg);color:var(--text);direc
 </div>
 <div class="notif" id="notif"></div>
 <script>
+const LPI={elec_hour:{rec:50,low:40,high:60},plumb_hour:{rec:42.5,low:35,high:50},plumb_toilet:{rec:80,low:60,high:100},plumb_shower:{rec:60,low:40,high:80},plaster_sqm:{rec:6,low:3,high:8},paint_2coats:{rec:7,low:4,high:10},tile_floor:{rec:8,low:6,high:10},tile_wall:{rec:9,low:7,high:12},laminate:{rec:6,low:4,high:8},drywall:{rec:19,low:16,high:22},kitchen_cab:{rec:75,low:50,high:100},door_interior:{rec:60,low:55,high:80},door_security:{rec:180,low:150,high:200},door_window:{rec:92,low:60,high:120},demo_floor:{rec:6.2,low:5,high:8},demo_wall:{rec:16,low:12,high:20},demo_bathroom:{rec:420,low:350,high:500},demo_kitchen:{rec:260,low:200,high:350},demo_debris:{rec:300,low:220,high:400},elec_rewire_3ph:{rec:19.5,low:15,high:24},elec_rewire_1ph:{rec:17,low:13,high:21},ac_install:{rec:135,low:100,high:180},solar_install:{rec:120,low:90,high:160},roof_waterproof:{rec:10.5,low:8,high:14},facade_paint:{rec:8,low:6,high:10},facade_plaster:{rec:15,low:12,high:18}};
+function lpi(k){return LPI[k]?.rec||0;}
+function getFloorFactor(floor,hasElevator){const n=Number(floor)||1;let b=n<=1?1.0:n===2?1.05:n===3?1.08:n===4?1.12:n===5?1.16:1.20;if(!hasElevator&&n>=2)b+=0.08;return Math.round((b+1e-10)*100)/100;}
+
+
 let sessionApiKey='';
 const MAX_IMAGE_SIZE_BYTES=10*1024*1024;
 const PRICE_CACHE_KEY='renovation-price-cache-v1';
@@ -1161,7 +1166,7 @@ function initUnits(){
 function addUnit(){
   uid++;
   units.push({id:uid,name:`יחידה ${uid}`,floor:1,size:35,rooms:'1',finish:'Mid',
-    elec:true,plumb:true,ac:true,furn:true,kitchen:true,bath:true,floor_:true,solar:false,
+    elec:true,plumb:true,ac:true,furn:true,kitchen:true,bath:true,floor_:true,solar:false,hasElevator:true,
     elec_brand:'Legrand',elec_sockets:4,elec_switches:6,elec_lights:8,elec_ac_points:1,elec_3phase:true,
     notes:''});
   images[uid]=[];
@@ -1178,7 +1183,7 @@ function renderUnits(){
     const d=document.createElement('div'); d.className='unit-card';
     d.innerHTML=`
       <div class="unit-card-head">
-        <span class="unit-badge">🏠 ${esc(u.name)}</span>
+        <span class="unit-badge">🏠 ${esc(u.name)}</span><span style="font-size:9px;color:var(--t3);margin-right:6px;">${getFloorFactor(u.floor||1,u.hasElevator!==false)>1?'×'+getFloorFactor(u.floor||1,u.hasElevator!==false)+' קומה':''}</span>
         <button class="unit-del" onclick="delUnit(${u.id})">✕ הסר</button>
       </div>
       <div class="frow">
@@ -1198,6 +1203,7 @@ function renderUnits(){
           </div>
         </div>
       </div>
+      <div class="fcheck${u.hasElevator?' on':''}" onclick="toggleUC(${u.id},'hasElevator',this)" style="margin-bottom:5px;"><div class="fcheck-box">${u.hasElevator?'✓':''}</div><div class="fcheck-txt">🛗 יש מעלית בבניין</div></div>
       <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:4px;margin-top:7px;">
         ${[['elec','⚡ חשמל'],['plumb','🔧 אינסטל'],['ac','❄️ מיזוג'],['furn','🛋 ריהוט'],['kitchen','🍳 מטבח'],['bath','🚿 אמבטיה'],['floor_','🪵 ריצוף'],['solar','☀️ דוד שמש']].map(([f,lbl])=>`
           <div class="fcheck${u[f]?' on':''}" onclick="toggleUC(${u.id},'${f}',this)">
@@ -1742,7 +1748,7 @@ function finishCategory(u, bldg){
       qty:area,
       unit:'מ"ר',
       unit_mat:roundMoney(1.8*profile.finish*factor),
-      unit_labor:roundMoney(3.6*profile.finish)
+      unit_labor:roundMoney(lpi('plaster_sqm')*profile.finish)
     }),
     makeBomItem({
       name:'צבע פנים 2 שכבות',
@@ -1752,7 +1758,7 @@ function finishCategory(u, bldg){
       qty:area,
       unit:'מ"ר',
       unit_mat:roundMoney(1.5*factor),
-      unit_labor:roundMoney(4.8*profile.finish)
+      unit_labor:roundMoney(lpi('paint_2coats')*profile.finish)
     })
   ];
   if(bldg.condition==='גולמי ללא גמר'){
@@ -1779,7 +1785,7 @@ function flooringCategory(u, bldg){
       product:floorChoice,
       qty,
       unit:'מ"ר',
-      unit_labor:roundMoney(11.5*profile.finish)
+      unit_labor:roundMoney(lpi('tile_floor')*profile.finish)
     }),
     makeBomItem({
       name:'דבק, רובה ופילוס',
@@ -1835,7 +1841,7 @@ function electricalCategory(u, bldg){
     qty:u.size,
     unit:'מ"ר',
     unit_mat:roundMoney((u.elec_3phase ? 10.5 : 8.5)*profile.mep),
-    unit_labor:roundMoney((u.elec_3phase ? 19.5 : 17)*profile.mep)
+    unit_labor:roundMoney(lpi(u.elec_3phase?'elec_rewire_3ph':'elec_rewire_1ph')*profile.mep)
   }));
   if(lightingChoice && lightingQty>0){
     items.push(makeCatalogItem('lighting', u.finish, {
@@ -1872,7 +1878,7 @@ function plumbingCategory(u, bldg){
       qty:u.size,
       unit:'מ"ר',
       unit_mat:roundMoney(7.2*profile.mep),
-      unit_labor:roundMoney(11.8*profile.mep)
+      unit_labor:roundMoney(lpi('plumb_hour')*0.28*profile.mep)
     }),
     makeBomItem({
       name:'מחברים, סיפונים וברזי ניתוק',
@@ -1920,7 +1926,7 @@ function bathroomCategory(u, bldg){
       qty:tileArea,
       unit:'מ"ר',
       unit_mat:roundMoney(tileChoice.price + 3.6*finishWeight(u.finish)),
-      unit_labor:roundMoney(14.5*profile.finish)
+      unit_labor:roundMoney(lpi('tile_wall')*1.05*profile.finish)
     }));
   }
   return makeCategory('חדר רחצה','🚿',items);
@@ -1966,7 +1972,7 @@ function acCategory(u){
   if(!acChoice) return null;
   const count=Math.max(1,Number(u.elec_ac_points)||1);
   return makeCategory('מיזוג','❄️',[
-    makeCatalogItem('ac', u.finish, {product:acChoice, qty:count, unit_labor:135}),
+    makeCatalogItem('ac', u.finish, {product:acChoice, qty:count, unit_labor:lpi('ac_install')},
     makeBomItem({
       name:'צנרת גז, ניקוז וקונסולות',
       cat_ref:'AC-KIT',
@@ -1983,7 +1989,7 @@ function solarCategory(u){
   const solarChoice=getCatalogProduct('solar', u.finish);
   if(!solarChoice) return null;
   return makeCategory('דוד שמש','☀️',[
-    makeCatalogItem('solar', u.finish, {product:solarChoice, qty:1, unit_labor:120}),
+    makeCatalogItem('solar', u.finish, {product:solarChoice, qty:1, unit_labor:lpi('solar_install')},
     makeBomItem({
       name:'חיזוקים, ברזים וחיבור לגג',
       cat_ref:'SOLAR-KIT',
@@ -2034,7 +2040,7 @@ function openingsCategory(u, bldg){
   }
   if(windowQty>0){
     const windowChoice=getCatalogProduct('windows', u.finish);
-    if(windowChoice) items.push(makeCatalogItem('windows', u.finish, {product:windowChoice, qty:windowQty, unit_labor:92}));
+    if(windowChoice) items.push(makeCatalogItem('windows', u.finish, {product:windowChoice, qty:windowQty, unit_labor:lpi('door_window')}));
   }
   return makeCategory('פתחים','🚪',items);
 }
@@ -2176,7 +2182,7 @@ function roofCategory(bldg){
       qty:roofArea,
       unit:'מ"ר',
       unit_mat:12.5,
-      unit_labor:10.5
+      unit_labor:lpi('roof_waterproof')
     }),
     makeBomItem({
       name:'שיפועים ותיקוני בטון מקומיים',
@@ -2218,7 +2224,7 @@ function exteriorSiteCategory(bldg){
   }
   return makeCategory('חוץ ופיתוח','🌿',items);
 }
-function buildUnitBomFromData(u, bldg){
+function buildUnitBomFromData(u, bldg, floorFactor=1){
   const categories=[finishCategory(u,bldg)];
   if(u.floor_) categories.push(flooringCategory(u,bldg));
   if(u.elec) categories.push(electricalCategory(u,bldg));
@@ -2263,7 +2269,7 @@ function buildDemolitionBom(bldg){
       qty:floorRemovalArea,
       unit:'מ"ר',
       unit_mat:0,
-      unit_labor:roundMoney(6.2*profile.demo)
+      unit_labor:roundMoney(lpi('demo_floor')*profile.demo)
     }));
   }
   if(bathroomDemoCount>0 && bldg.condition!=='גולמי ללא גמר'){
@@ -2274,7 +2280,7 @@ function buildDemolitionBom(bldg){
       qty:bathroomDemoCount,
       unit:'חדר',
       unit_mat:0,
-      unit_labor:roundMoney(420*profile.demo)
+      unit_labor:roundMoney(lpi('demo_bathroom')*profile.demo)
     }));
   }
   if(kitchenDemoCount>0 && bldg.condition!=='גולמי ללא גמר'){
@@ -2285,7 +2291,7 @@ function buildDemolitionBom(bldg){
       qty:kitchenDemoCount,
       unit:'מטבח',
       unit_mat:0,
-      unit_labor:roundMoney(260*profile.demo)
+      unit_labor:roundMoney(lpi('demo_kitchen')*profile.demo)
     }));
   }
   units.forEach(u=>items.push(...wallDemolitionItems(u.id, `${u.name} · `)));
@@ -2300,7 +2306,7 @@ function buildDemolitionBom(bldg){
       qty:debrisLoads,
       unit:'מכולה',
       unit_mat:0,
-      unit_labor:300
+      unit_labor:lpi('demo_debris')
     }));
   }
   const subtotal=sumBy(items,'total');
@@ -2362,7 +2368,7 @@ async function generateBOM(options={}){
     facadeType:document.getElementById('facadeType').value,
   };
   try{
-    const unitBoms=units.map(u=>buildUnitBomFromData(u,bldg));
+    const unitBoms=units.map(u=>{const ff=getFloorFactor(u.floor||1,u.hasElevator!==false);return buildUnitBomFromData(u,bldg,ff);});
     const commonAreas=buildCommonAreasBom(bldg);
     const demolition=buildDemolitionBom(bldg);
     const timeline=buildTimeline(bldg,demolition);
