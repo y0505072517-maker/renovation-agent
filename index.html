@@ -208,10 +208,23 @@ body{font-family:'Heebo',sans-serif;background:var(--bg);color:var(--text);direc
   .main-wrap{grid-template-columns:1fr;}
   .bom-panel{position:relative;top:0;height:auto;border-right:none;border-top:1px solid var(--border);}
 }
+/* MOBILE SIDEBAR */
+.sb-toggle{display:none;background:var(--s2);border:1px solid var(--border);color:var(--text);width:36px;height:36px;border-radius:8px;align-items:center;justify-content:center;cursor:pointer;font-size:18px;flex-shrink:0;font-family:'Heebo',sans-serif;}
+.sb-toggle:hover{border-color:var(--border2);}
+.sb-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.55);z-index:140;}
+@media (max-width:768px){
+  .sb-toggle{display:flex;}
+  .bom-panel{position:fixed!important;top:0;left:0;right:auto;width:min(320px,85vw);height:100vh;max-height:100vh;z-index:150;transform:translateX(-100%);transition:transform 0.25s ease;border-right:none;border-left:1px solid var(--border);border-top:none!important;box-shadow:4px 0 20px rgba(0,0,0,0.5);}
+  .bom-panel.sb-open{transform:translateX(0);}
+  .sb-overlay.show{display:block;}
+  body.sb-locked{overflow:hidden;}
+}
 </style>
 </head>
 <body>
+<div class="sb-overlay" id="sbOverlay" onclick="closeSidebar()"></div>
 <div class="topbar">
+  <button class="sb-toggle" onclick="toggleSidebar()" aria-label="פתיחה/סגירה של תפריט צד">☰</button>
   <div class="logo-mark">🏗</div>
   <div><div class="logo-text">סוכן שיפוצים PRO · Athens</div><div class="logo-sub">v9 · LPI מחקרי · קומות · הריסה · BOM עמוק · 135 ספקים</div></div>
   <div class="topbar-right">
@@ -2566,6 +2579,21 @@ function doCopy(){
   try{ document.execCommand('copy'); }catch(e){ navigator.clipboard?.writeText(ta.value); }
   notify("📋 הועתק! הדבק בצ'אט הראשי של Claude");
 }
+function openSidebar(){
+  document.querySelector('.bom-panel')?.classList.add('sb-open');
+  document.getElementById('sbOverlay')?.classList.add('show');
+  document.body.classList.add('sb-locked');
+}
+function closeSidebar(){
+  document.querySelector('.bom-panel')?.classList.remove('sb-open');
+  document.getElementById('sbOverlay')?.classList.remove('show');
+  document.body.classList.remove('sb-locked');
+}
+function toggleSidebar(){
+  const p=document.querySelector('.bom-panel');
+  if(p && p.classList.contains('sb-open')) closeSidebar(); else openSidebar();
+}
+window.addEventListener('resize',()=>{ if(window.innerWidth>768) closeSidebar(); });
 </script>
 </body>
 </html>
